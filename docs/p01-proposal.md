@@ -68,12 +68,16 @@ Our dataset is related to our problem domain because our dataset collected value
 | Reported Voting and Registration, by Age, for States: November 2020                           | 312                           | 13                            |
 | Reasons for Not Voting, By Selected Characteristics: November 2020                            | 41                            | 15                            |
 
-Include a full citation to each data file, including URL.
 Bureau, US Census. “Voting and Registration in the Election of November 2020.” Census.gov, 28 Oct. 2021, [https://www.census.gov/data/tables/time-series/demo/voting-and-registration/p20-585.html.](https://www.census.gov/data/tables/time-series/demo/voting-and-registration/p20-585.html)
+
 [Reported Voting and Registration, by Sex, Race and Hispanic Origin, for States: November 2020](https://www2.census.gov/programs-surveys/cps/tables/p20/585/table04b.xlsx) 
+
 [Reported Voting and Registration of Family Members, by Age and Family Income: November 2020](https://www2.census.gov/programs-surveys/cps/tables/p20/585/table07.xlsx)
+
 [Method of Voting, By Selected Characteristics: November 2020](https://www2.census.gov/programs-surveys/cps/tables/p20/585/table14.xlsx)
+
 [Reported Voting and Registration, by Sex, Veteran Status, and Age: November 2020](https://www2.census.gov/programs-surveys/cps/tables/p20/585/table13.xlsx)
+
 [Reasons For Not Voting, By Selected Characteristics: November 2020](https://www2.census.gov/programs-surveys/cps/tables/p20/585/table10.xlsx)
 
 1. Who collected the data? When? For what purpose? 
