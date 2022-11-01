@@ -106,6 +106,8 @@ Hernandez, X. (2021, May 24). *3 Washington State counties facing a lawsuit for 
 
 Johnson, T. R. (2020, January 16). *The new voter suppression.* Brennan Center for Justice. Retrieved October 31, 2022, from https://www.brennancenter.org/our-work/research-reports/new-voter-suppression
 
+# Appendix A: Questions
 
+None.
 
 
