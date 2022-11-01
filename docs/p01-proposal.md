@@ -13,10 +13,17 @@ INFO-201: Technical Foundations of Informatics - The Information School - Univer
 Autumn 2022
 
 # Abstract
+Our main question is “How do the race, economics, and social status of each household affect voting rates in the United States in 2020?” This question is important because it allows us to see how democracy and votes are affected by demographics and socioeconomic status. To address the question, we will research, collect, and analyze the data for elections from 2020, and make comparisons between the states for better understanding.  
 
 # Keywords
+- Frequency of Voting
+- Demographics 
+- Barriers
+- Gender 
+- Income
 
 # Introduction
+In the United States, the voting results and involvements all differ based on race, Hispanic origin, sex, age, or socioeconomic status. Our project is to demonstrate and visualize these registration and voting data between the states of America in 2020. And we will mainly focus on household income, age, and educational attainment effects on voting rates between the states. Also, we will address the value of human well-being and the reality of the voting system in America. This data science will allow us to teach about the socioeconomic status influencing voting behavior in the United States. 
 
 # Problem Domain
 ## I. Topic & Sociotechnical Setting
@@ -38,12 +45,22 @@ A potential benefit of investigating democratic disparities would be the ability
 Bringing awareness to the issues faced by underrepresented communities would prevent further voter suppression and underrepresentation of said communities in the legal system and the government.
 
 # Research Questions
+1. How do voting rates differ between each state?
+  * This question was motivated by the idea that each state has their own way of having elections done whether that is by going in person, having mail in voting, or both and it will be interesting to see if states with a certain way of voting have higher or lower voting rates.
+2. How does someone’s household income correlate with voting rates?
+  * This question is important because there should not be obstacles to prevent people from voting. If it is found that differences in income do affect whether one can vote, more needs to be done to get rid of those differences.
+3. How does one’s age affect their tendency to vote?
+  * This question is important because as people get older, health problems tend to rise that can potentially make it harder to go out and vote. If voting rates are higher among younger populations, more needs to be done to prevent those differences.
+4. How does education attainment relate to whether one votes or not?
+  * This question is important because one of the reasons the electoral college was created was due to the fear that people weren’t educated enough to vote. If voting among people with higher education is indeed increasing, the electoral college should possibly be modified.
 
 # The Dataset
 
 # Expected Implications
+The possible implications for our research questions is that it may push people to rethink and reevaluate the voting system set in place in America. It will allow for us to see the reality of the voting system and see the adverse effects of common issues such as age, finances, and education. This will allow state officials and policymakers to revise their systems and have a better understanding of where most votes come from and how certain populations make up most of the numbers. This will create better systems to be put in place to create equality and fair voting.
 
 # Limitations
+A limitation that may need to be addressed is the possibility of residents simply not voting, for no reason other than negligence. Another may be poor advertising about elections and election dates in certain areas of Seattle due to institutionalized discriminatory policies.
 
 # References
 
