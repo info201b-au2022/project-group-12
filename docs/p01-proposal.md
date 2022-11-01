@@ -69,12 +69,12 @@ Our dataset is related to our problem domain because our dataset collected value
 | Reasons for Not Voting, By Selected Characteristics: November 2020                            | 41                            | 15                            |
 
 Include a full citation to each data file, including URL.
-Bureau, US Census. “Voting and Registration in the Election of November 2020.” Census.gov, 28 Oct. 2021, [(https://www.census.gov/data/tables/time-series/demo/voting-and-registration/p20-585.html.)](https://www.census.gov/data/tables/time-series/demo/voting-and-registration/p20-585.html)
-[(Reported Voting and Registration, by Sex, Race and Hispanic Origin, for States: November 2020)](https://www2.census.gov/programs-surveys/cps/tables/p20/585/table04b.xlsx) 
-[(Reported Voting and Registration of Family Members, by Age and Family Income: November 2020)](https://www2.census.gov/programs-surveys/cps/tables/p20/585/table07.xlsx)
-[(Method of Voting, By Selected Characteristics: November 2020)](https://www2.census.gov/programs-surveys/cps/tables/p20/585/table14.xlsx)
-[(Reported Voting and Registration, by Sex, Veteran Status, and Age: November 2020)](https://www2.census.gov/programs-surveys/cps/tables/p20/585/table13.xlsx)
-[(Reasons For Not Voting, By Selected Characteristics: November 2020)](https://www2.census.gov/programs-surveys/cps/tables/p20/585/table10.xlsx)
+Bureau, US Census. “Voting and Registration in the Election of November 2020.” Census.gov, 28 Oct. 2021, [https://www.census.gov/data/tables/time-series/demo/voting-and-registration/p20-585.html.](https://www.census.gov/data/tables/time-series/demo/voting-and-registration/p20-585.html)
+[Reported Voting and Registration, by Sex, Race and Hispanic Origin, for States: November 2020](https://www2.census.gov/programs-surveys/cps/tables/p20/585/table04b.xlsx) 
+[Reported Voting and Registration of Family Members, by Age and Family Income: November 2020](https://www2.census.gov/programs-surveys/cps/tables/p20/585/table07.xlsx)
+[Method of Voting, By Selected Characteristics: November 2020](https://www2.census.gov/programs-surveys/cps/tables/p20/585/table14.xlsx)
+[Reported Voting and Registration, by Sex, Veteran Status, and Age: November 2020](https://www2.census.gov/programs-surveys/cps/tables/p20/585/table13.xlsx)
+[Reasons For Not Voting, By Selected Characteristics: November 2020](https://www2.census.gov/programs-surveys/cps/tables/p20/585/table10.xlsx)
 
 1. Who collected the data? When? For what purpose? 
  * The United States Census Bureau collected the data. They did this after the 2020 federal election and continued to update it until October 28, 2021. They did this because their mission is to be the leading provider of data related to the United States people and economy.
