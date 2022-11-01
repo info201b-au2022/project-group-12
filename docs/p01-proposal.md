@@ -55,6 +55,25 @@ Bringing awareness to the issues faced by underrepresented communities would pre
   * This question is important because one of the reasons the electoral college was created was due to the fear that people weren’t educated enough to vote. If voting among people with higher education is indeed increasing, the electoral college should possibly be modified.
 
 # The Dataset
+Our dataset is related to our problem domain because our dataset collected values about the total population in a group, the amount registered in that group, and the amount of people that actually registered in that group. The many groups in our dataset include age, sex, income, location, education, etc. This dataset will enable us to answer our research questions because we will be able to make a visualization that can show us relative trends between voting rates and each of the variables like income, age, and education levels.
+
+| Name of Data File                                                                             | Number of Observations (Rows) | Number of Variables (Columns) |
+|-----------------------------------------------------------------------------------------------|-------------------------------|-------------------------------|
+| Reported Voting and Registration, by Sex, Race and Hispanic Origin, for States: November 2020 | 572                           | 13                            |
+| Reported Voting and Registration of Family Members, by Age and Family Income: November 2020   | 71                            | 17                            |
+| Method of Voting, By Selected Characteristics: November 2020                                  | 39                            | 6                             |
+| Reported Voting and Registration, by Age, for States: November 2020                           | 312                           | 13                            |
+| Reasons for Not Voting, By Selected Characteristics: November 2020                            | 41                            | 15                            |
+
+1. Who collected the data? When? For what purpose? 
+ * The United States Census Bureau collected the data. They did this after the 2020 federal election and continued to update it until October 28, 2021. They did this because their mission is to be the leading provider of data related to the United States people and economy.
+2. How was the data collection effort funded? Who is likely to benefit from the data or make money? 
+ * The data collection effort was funded by the United States Census Bureau. We believe politicians who are interested in voting rates and turn out in particular areas will benefit most from the data. This is because they can see which types of people or types of areas vote more and may try to either target those populations to get their vote or reach out to populations that have low voting rates and try to find a way to increase those numbers in their favor.
+3. How was the data validated and held secure? Is it credible and trustworthy?
+ * The data was validated and held secure by obtaining the data from the 2020 Current Population Survey Voting and Registration Supplement for the presidential election. The United States Census Bureau also watches for misinformation online and makes sure they have high data quality and that those efforts are transparent. This makes the data credible and trustworthy.
+4. How did you obtain the data? Do you credit the source of the data? 
+ * We obtained this data by doing google searches about the 2020 elections with keywords like “census”, “demographics”, “population”, etc. which led us to this data. Yes, we credit the source of the data.
+
 
 # Expected Implications
 The possible implications for our research questions is that it may push people to rethink and reevaluate the voting system set in place in America. It will allow for us to see the reality of the voting system and see the adverse effects of common issues such as age, finances, and education. This will allow state officials and policymakers to revise their systems and have a better understanding of where most votes come from and how certain populations make up most of the numbers. This will create better systems to be put in place to create equality and fair voting.
