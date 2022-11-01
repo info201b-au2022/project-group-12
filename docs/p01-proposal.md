@@ -1,5 +1,8 @@
 # Voting Frequencies and Democratic Equity: Project Proposal
 
+# Code Name
+Seattle Vote
+
 # Authors
 - Naiyyra Abdel Aziz, naiyyraa@uw.edu
 - Elizabeth Deng, elideng@uw.edu
@@ -23,7 +26,7 @@ Our main question is “How do the race, economics, and social status of each ho
 - Income
 
 # Introduction
-In the United States, the voting results and involvements all differ based on race, Hispanic origin, sex, age, or socioeconomic status. Our project is to demonstrate and visualize these registration and voting data between the states of America in 2020. And we will mainly focus on household income, age, and educational attainment effects on voting rates between the states. Also, we will address the value of human well-being and the reality of the voting system in America. This data science will allow us to teach about the socioeconomic status influencing voting behavior in the United States. 
+In the United States, the voting results and how people are involved in the process of voting all differ based on race, Hispanic origin, sex, age, or socioeconomic status. Our project is to demonstrate and visualize what the differences in registration as well as voting are by looking at the data provided. Between these different variables, we will also be comparing how they differ between the states of the United States of America by looking at the results from the election in 2020. And we will mainly focus on household income, age, and educational attainment effects on voting rates between the states. Also, we will address the value of human well-being and the reality of the voting system in America to see what aspects of the current voting system need to be changed. This data science will allow us to teach about the socioeconomic status influencing voting behavior in the United States. 
 
 # Problem Domain
 ## I. Topic & Sociotechnical Setting
@@ -65,6 +68,14 @@ Our dataset is related to our problem domain because our dataset collected value
 | Reported Voting and Registration, by Age, for States: November 2020                           | 312                           | 13                            |
 | Reasons for Not Voting, By Selected Characteristics: November 2020                            | 41                            | 15                            |
 
+Include a full citation to each data file, including URL.
+Bureau, US Census. “Voting and Registration in the Election of November 2020.” Census.gov, 28 Oct. 2021, [(https://www.census.gov/data/tables/time-series/demo/voting-and-registration/p20-585.html.)](https://www.census.gov/data/tables/time-series/demo/voting-and-registration/p20-585.html)
+[(Reported Voting and Registration, by Sex, Race and Hispanic Origin, for States: November 2020)](https://www2.census.gov/programs-surveys/cps/tables/p20/585/table04b.xlsx) 
+[(Reported Voting and Registration of Family Members, by Age and Family Income: November 2020)](https://www2.census.gov/programs-surveys/cps/tables/p20/585/table07.xlsx)
+[(Method of Voting, By Selected Characteristics: November 2020)](https://www2.census.gov/programs-surveys/cps/tables/p20/585/table14.xlsx)
+[(Reported Voting and Registration, by Sex, Veteran Status, and Age: November 2020)](https://www2.census.gov/programs-surveys/cps/tables/p20/585/table13.xlsx)
+[(Reasons For Not Voting, By Selected Characteristics: November 2020)](https://www2.census.gov/programs-surveys/cps/tables/p20/585/table10.xlsx)
+
 1. Who collected the data? When? For what purpose? 
  * The United States Census Bureau collected the data. They did this after the 2020 federal election and continued to update it until October 28, 2021. They did this because their mission is to be the leading provider of data related to the United States people and economy.
 2. How was the data collection effort funded? Who is likely to benefit from the data or make money? 
@@ -76,10 +87,10 @@ Our dataset is related to our problem domain because our dataset collected value
 
 
 # Expected Implications
-The possible implications for our research questions is that it may push people to rethink and reevaluate the voting system set in place in America. It will allow for us to see the reality of the voting system and see the adverse effects of common issues such as age, finances, and education. This will allow state officials and policymakers to revise their systems and have a better understanding of where most votes come from and how certain populations make up most of the numbers. This will create better systems to be put in place to create equality and fair voting.
+The possible implications for our research questions is that it may push people to rethink and reevaluate the voting system set in place in America. It will allow for us to see the reality of the voting system and see the adverse effects of common issues such as age, finances, and education. This will allow state officials and policymakers to revise their systems and have a better understanding of where most votes come from and how certain populations make up most of the numbers. This will create better systems to be put in place to create equality and fair voting. However, another implication is that it's possible that politicians use the data we collect to their advantage by looking at the populations that have higher voting rates and only target those to their campaign. This can be a problem because this would further enhance the problem that is currently happening.
 
 # Limitations
-A limitation that may need to be addressed is the possibility of residents simply not voting, for no reason other than negligence. Another may be poor advertising about elections and election dates in certain areas of Seattle due to institutionalized discriminatory policies.
+A limitation that may need to be addressed is the possibility of residents simply not voting, for no reason other than negligence. We might address this limitation by examining the total number of registered voters, the total number of people who actually voted, and count the difference of that as people who didn't vote. Another limitation in this project could be differences in advertising about elections and election dates across the United States of America. It's possible that this could influence whether people vote or not and could vary greatly across the United States. That means that in some locations, voting rates could be inflated but since we aren't looking into this variable, we won't be sure how it gets affected. To address this, we will example the margin of errors in the data to give us a relative idea about what the differences are and if they are significant.
 
 # References
 
