@@ -20,13 +20,13 @@ Our main question is “How do the race, economics, and social status of each ho
 
 # Keywords
 - Frequency of Voting
-- Demographics 
+- Demographics
 - Barriers
-- Gender 
+- Gender
 - Income
 
 # Introduction
-In the United States, the voting results and how people are involved in the process of voting all differ based on race, Hispanic origin, sex, age, or socioeconomic status. Our project is to demonstrate and visualize what the differences in registration as well as voting are by looking at the data provided. Between these different variables, we will also be comparing how they differ between the states of the United States of America by looking at the results from the election in 2020. And we will mainly focus on household income, age, and educational attainment effects on voting rates between the states. Also, we will address the value of human well-being and the reality of the voting system in America to see what aspects of the current voting system need to be changed. This data science will allow us to teach about the socioeconomic status influencing voting behavior in the United States. 
+In the United States, the voting results and how people are involved in the process of voting all differ based on race, Hispanic origin, sex, age, or socioeconomic status. Our project is to demonstrate and visualize what the differences in registration as well as voting are by looking at the data provided. Between these different variables, we will also be comparing how they differ between the states of the United States of America by looking at the results from the election in 2020. And we will mainly focus on household income, age, and educational attainment effects on voting rates between the states. Also, we will address the value of human well-being and the reality of the voting system in America to see what aspects of the current voting system need to be changed. This data science will allow us to teach about the socioeconomic status influencing voting behavior in the United States.
 
 # Problem Domain
 ## I. Topic & Sociotechnical Setting
@@ -52,10 +52,8 @@ Bringing awareness to the issues faced by underrepresented communities would pre
   * This question was motivated by the idea that each state has their own way of having elections done whether that is by going in person, having mail in voting, or both and it will be interesting to see if states with a certain way of voting have higher or lower voting rates.
 2. How does someone’s household income correlate with voting rates?
   * This question is important because there should not be obstacles to prevent people from voting. If it is found that differences in income do affect whether one can vote, more needs to be done to get rid of those differences.
-3. How does one’s age affect their tendency to vote?
-  * This question is important because as people get older, health problems tend to rise that can potentially make it harder to go out and vote. If voting rates are higher among younger populations, more needs to be done to prevent those differences.
-4. How does education attainment relate to whether one votes or not?
-  * This question is important because one of the reasons the electoral college was created was due to the fear that people weren’t educated enough to vote. If voting among people with higher education is indeed increasing, the electoral college should possibly be modified.
+3. How does location affect the type of way someone votes or returns their ballot?
+  * This question is important because voting needs to be practical so that nobody feels like they are being prevented from voting. Since everybody has unique lives, options are necessary so that everyone can turn in their ballot so it will be interesting to see if certain locations have less options than others.
 
 # The Dataset
 Our dataset is related to our problem domain because our dataset collected values about the total population in a group, the amount registered in that group, and the amount of people that actually registered in that group. The many groups in our dataset include age, sex, income, location, education, etc. This dataset will enable us to answer our research questions because we will be able to make a visualization that can show us relative trends between voting rates and each of the variables like income, age, and education levels.
@@ -63,35 +61,33 @@ Our dataset is related to our problem domain because our dataset collected value
 | Name of Data File                                                                             | Number of Observations (Rows) | Number of Variables (Columns) |
 |-----------------------------------------------------------------------------------------------|-------------------------------|-------------------------------|
 | Reported Voting and Registration, by Sex, Race and Hispanic Origin, for States: November 2020 | 572                           | 13                            |
-| Reported Voting and Registration of Family Members, by Age and Family Income: November 2020   | 71                            | 17                            |
-| Method of Voting, By Selected Characteristics: November 2020                                  | 39                            | 6                             |
-| Reported Voting and Registration, by Age, for States: November 2020                           | 312                           | 13                            |
-| Reasons for Not Voting, By Selected Characteristics: November 2020                            | 41                            | 15                            |
+| U.S. General Elections 2018 - Analysis Dataset   | 3114                            | 39                            |
+| Survey_Data_from_5224_immigrant_and_refugee                                  | 5224                            | 29                             |
+| Voting Locations and Ballot Boxes                           | 538                           | 10                            |
 
-Bureau, US Census. “Voting and Registration in the Election of November 2020.” Census.gov, 28 Oct. 2021, [https://www.census.gov/data/tables/time-series/demo/voting-and-registration/p20-585.html.](https://www.census.gov/data/tables/time-series/demo/voting-and-registration/p20-585.html)
 
-[Reported Voting and Registration, by Sex, Race and Hispanic Origin, for States: November 2020](https://www2.census.gov/programs-surveys/cps/tables/p20/585/table04b.xlsx) 
+Bureau, US Census. “Voting and Registration in the Election of November 2020.” Census.gov, 28 Oct. 2021, [Reported Voting and Registration, by Sex, Race and Hispanic Origin, for States: November 2020](https://www2.census.gov/programs-surveys/cps/tables/p20/585/table04b.xlsx)
 
-[Reported Voting and Registration of Family Members, by Age and Family Income: November 2020](https://www2.census.gov/programs-surveys/cps/tables/p20/585/table07.xlsx)
+GitHub,
+[U.S. General Elections 2018 - Analysis Dataset](https://raw.githubusercontent.com/MEDSL/2018-elections-unoffical/master/election-context-2018.csv)
 
-[Method of Voting, By Selected Characteristics: November 2020](https://www2.census.gov/programs-surveys/cps/tables/p20/585/table14.xlsx)
+“Seattle Votes Survey Data from 5,224 Immigrant and Refugee Residents of Seattle/King County: City of Seattle Open Data Portal.” Seattle, [Survey_Data_from_5224_immigrant_and_refugee](https://data.seattle.gov/Community/Seattle-Votes-Survey-Data-from-5-224-immigrant-and/y5cf-gy2p/data)
 
-[Reported Voting and Registration, by Sex, Veteran Status, and Age: November 2020](https://www2.census.gov/programs-surveys/cps/tables/p20/585/table13.xlsx)
+Washington Geospatial Open Data Portal, [Voting Locations and Ballot Boxes](https://geo.wa.gov/datasets/75fd31e30c76468291b48470a20b4b49/explore?location=47.194487%2C-120.764138%2C7.64&showTable=true)
 
-[Reasons For Not Voting, By Selected Characteristics: November 2020](https://www2.census.gov/programs-surveys/cps/tables/p20/585/table10.xlsx)
 
-1. Who collected the data? When? For what purpose? 
+1. Who collected the data? When? For what purpose?
  * The United States Census Bureau collected the data. They did this after the 2020 federal election and continued to update it until October 28, 2021. They did this because their mission is to be the leading provider of data related to the United States people and economy.
-2. How was the data collection effort funded? Who is likely to benefit from the data or make money? 
+2. How was the data collection effort funded? Who is likely to benefit from the data or make money?
  * The data collection effort was funded by the United States Census Bureau. We believe politicians who are interested in voting rates and turn out in particular areas will benefit most from the data. This is because they can see which types of people or types of areas vote more and may try to either target those populations to get their vote or reach out to populations that have low voting rates and try to find a way to increase those numbers in their favor.
 3. How was the data validated and held secure? Is it credible and trustworthy?
  * The data was validated and held secure by obtaining the data from the 2020 Current Population Survey Voting and Registration Supplement for the presidential election. The United States Census Bureau also watches for misinformation online and makes sure they have high data quality and that those efforts are transparent. This makes the data credible and trustworthy.
-4. How did you obtain the data? Do you credit the source of the data? 
+4. How did you obtain the data? Do you credit the source of the data?
  * We obtained this data by doing google searches about the 2020 elections with keywords like “census”, “demographics”, “population”, etc. which led us to this data. Yes, we credit the source of the data.
 
 
 # Expected Implications
-- One possible implication for our research questions is that it may push people to rethink and reevaluate the voting system set in place in America. It will allow for us to see the reality of the voting system and see the adverse effects of common issues such as age, finances, and education. This will allow state officials and policymakers to revise their systems and have a better understanding of where most votes come from and how certain populations make up most of the numbers. This will create better systems to be put in place to create equality and fair voting. 
+- One possible implication for our research questions is that it may push people to rethink and reevaluate the voting system set in place in America. It will allow for us to see the reality of the voting system and see the adverse effects of common issues such as age, finances, and education. This will allow state officials and policymakers to revise their systems and have a better understanding of where most votes come from and how certain populations make up most of the numbers. This will create better systems to be put in place to create equality and fair voting.
 - However, another implication is that it's possible that politicians use the data we collect to their advantage by looking at the populations that have higher voting rates and only target those to their campaign. This can be a problem because this would further enhance the problem that is currently happening.
 
 # Limitations
@@ -107,8 +103,12 @@ Hernandez, X. (2021, May 24). *3 Washington State counties facing a lawsuit for 
 
 Johnson, T. R. (2020, January 16). *The new voter suppression.* Brennan Center for Justice. Retrieved October 31, 2022, from https://www.brennancenter.org/our-work/research-reports/new-voter-suppression
 
+GitHub, https://raw.githubusercontent.com/MEDSL/2018-elections-unoffical/master/election-context-2018.csv.
+
+“Seattle Votes Survey Data from 5,224 Immigrant and Refugee Residents of Seattle/King County: City of Seattle Open Data Portal.” Seattle, https://data.seattle.gov/Community/Seattle-Votes-Survey-Data-from-5-224-immigrant-and/y5cf-gy2p/data.
+ 
+Washington Geospatial Open Data Portal, https://geo.wa.gov/datasets/75fd31e30c76468291b48470a20b4b49/explore?location=47.194487%2C-120.764138%2C7.64&amp;showTable=true.
+
 # Appendix A: Questions
 
 None.
-
-
