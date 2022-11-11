@@ -2,9 +2,9 @@ ballot_locations <- read.csv("/Users/sukhmandhillon/Library/CloudStorage/OneDriv
 View(ballot_locations)
 
 state <- map_data("state")
-washington <- subset(state, region=="washington")
+washington <- subset(state, region == "washington")
 counties <- map_data("county")
-washington_county <- subset(counties, region=="washington")
+washington_county <- subset(counties, region == "washington")
 
 filtered_counties <- data.frame(
   county = ballot_locations$County, type = ballot_locations$Type, lat = ballot_locations$Lat, long = ballot_locations$Long
@@ -25,7 +25,7 @@ overall_map
 
 complete_map <- overall_map +
   geom_polygon(data = washington_county, mapping = aes(x = long, y = lat, group=group), fill = NA, color = "white") +
-  geom_polygon(fill=NA, mapping = aes(x = long, y = lat))
+  geom_polygon(fill = NA, mapping = aes(x = long, y = lat))
 complete_map
 
 complete_map <- complete_map + labs(x = "Longitude", y = "Latitude")
