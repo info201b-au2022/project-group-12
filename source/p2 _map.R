@@ -49,6 +49,13 @@ complete_map
 # also limit voting rates in these populations.
 
 
+# Sources I used to help make my code:
+# https://jtr13.github.io/cc19/different-ways-of-plotting-u-s-map-in-r.html 
+# https://www.geeksforgeeks.org/how-to-color-scatter-plot-points-in-r/ 
+# https://stackoverflow.com/questions/2579995/control-the-size-of-points-in-an-r-scatterplot 
+# https://www.datanovia.com/en/blog/ggplot-axis-labels/ 
+
+
 
 
 
