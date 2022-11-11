@@ -5,7 +5,7 @@ these sub-directories (TODO: Update/Delete)
 
 |Source Directories | Brief Description|
 |---------------| -----------------|
-|[xxx](./xxx) | Description ... 
+|[Map](./p2_map.R) | This file contains the code to create a map from the Voting Locations and Ballot Boxes dataset. 
 |[xxx](./xxx) | Description ... 
 
 
