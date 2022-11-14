@@ -7,63 +7,42 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+
+library("dplyr")
+library("knitr")
 ```
 
-## What is this file for?
-
-* This file will eventually become your project report for **P02: Exploratory Data Analysis**. Specifically, you will write rmarkdown to report your exploratory data analysis.
-
-* Please see Canvas for more details.
-
-## ACCESSING THE /source DIRECTORY
-### Example 1: Source some code and run a function
-```{r}
-# Example 1: Note relative path, which can be read: Up one
-# directory(..), down into source (/source), and 
-# then "source" an R file (data_access.R)
-source("../source/data_access.R")
-data_access_test()
-```
-
-### Example 2: Initialize a variable and then use it
-```{r}
-# Example 1: This function was "sourced" above
-msg <- data_access_test(" Morgan!")
-```
-
-> `r msg` Hope you have a good day!! 
-
-## ABOUT THIS FILE: 
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+#Voting Frequencies & Democratic Equity: Exploratory Data Analysis  
 
 ```{r echo=FALSE}
 source("../source/summary_info.R")
 ```
 
-## Dynamic Paragraph
+## Summary 
 The average percentage of white voters in the 2018 election across the United States was `r summary_info$avg_white_pct`%.
 The average percentage of nonwhite voters in the 2018 election across the United States was `r summary_info$avg_nonwhite_pct`%.
 The state with the highest average median household income of voters in the 2018 election was `r summary_info$max_hh_inc`.
 The average percentage of female voters in the 2018 election across the United States was `r summary_info$avg_female_pct`%.
 The state with the highest average percentage of voters that were aged 29 and under in the 2018 election was `r summary_info$max_young`.
 
+## Table  
+### An Overview of Demographics (2016 Presidential Election)  
+The table below shows aggregate information about the states and how their populations  
+voted in the 2016 Presidential Election. All numerical value refer to percentages.   
+For Columns 4-10, these refer to each demographic as a percentage of *total* population.  
+
+##Why This Is Relevant  
+We chose to include this table because it gives a brief glimpse into how different   
+demographics within a state can affect the candidate it votes for. For example,   
+states with high (over 60%) rural populations tended to vote overwhelmingly for   
+Trump; meanwhile, states with higher median household incomes chose Clinton. 
+
+```{r pres_16_table, echo=FALSE}
+source("../source/2018_analysis.R")
+kable(pres_16_table)
+```
+
+ 
 
 ```{r echo=FALSE}
 source("../source/p2_map.R")
