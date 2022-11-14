@@ -5,42 +5,46 @@ library("knitr")
 
 data_orig <- read.csv('https://raw.githubusercontent.com/MEDSL/2018-elections-unoffical/master/election-context-2018.csv')
 
-data_wa <- data_orig %>%
-  filter(state == "Washington")
+View(data_orig)
 
 
 data <- select(data_orig, -c(10:21)) %>%
   select(-c(27))
 
-pres_16 <- data %>% 
-  select(state, county, trump16, clinton16, otherpres16,
-                            cvap, white_pct, nonwhite_pct, foreignborn_pct,
-                            female_pct, age29andunder_pct, age65andolder_pct,
-                            median_hh_inc, rural_pct) %>%
-  filter(state == "Washington")
+data <- na.omit(data)
 
+total <- data$trump16 + data$clinton16 + data$otherpres16
 
-total <- pres_16$trump16 + pres_16$clinton16 + pres_16$otherpres16
+pct_trump <- round((data$trump16 / total) * 100, 2)
 
-pct_trump <- round((pres_16$trump16 / total) * 100, 2)
+pct_clinton <- round((data$clinton16 / total) * 100, 2)
 
-pct_clinton <- round((pres_16$clinton16 / total) * 100, 2)
+pct_other <- round((data$otherpres16 / total) * 100, 2)
 
-pct_other <- round((pres_16$otherpres16 / total) * 100, 2)
-
-
-pres_16 <- transmute(pres_16, County = pres_16$county, Trump = pct_trump,
+pres_16 <- transmute(data, State = data$state,
+                     County = data$county, Trump = pct_trump,
                      Clinton = pct_clinton, Other = pct_other,
-                     Non_Hispanic_Whites = pres_16$white_pct,
-                     Non_White = pres_16$nonwhite_pct,
-                     Foreign_born = pres_16$foreignborn_pct,
-                     Female = pres_16$female_pct,
-                     Under_29 = pres_16$age29andunder_pct,
-                     Over_65 = pres_16$age65andolder_pct,
-                     Median_Income = pres_16$median_hh_inc,
-                     Rural = pres_16$rural_pct)
+                     White = data$white_pct,
+                    Non_White = data$nonwhite_pct,
+                     Foreign_born = data$foreignborn_pct,
+                     Female = data$female_pct,
+                     Under_29 = data$age29andunder_pct,
+                     Over_65 = data$age65andolder_pct,
+                     Median_Income = data$median_hh_inc,
+                     Rural = data$rural_pct) 
 
+pres_16_table <- pres_16 %>%
+  group_by(State) %>%
+  summarize(
+    Trump = round(mean(Trump), 1),
+    Clinton = round(mean(Clinton), 1),
+    White = round(mean(White), 1),
+    NonWhite = round(mean(Non_White), 1),
+    Foreign_Born = round(mean(Foreign_born), 1),
+    Female = round(mean(Female), 1),
+    Under_29 = round(mean(Under_29), 1),
+    Median_Income = round(mean(Median_Income), 1),
+    Rural = round(mean(Rural), 1)
+  )
 
-
-
-View(pres_16)
+View(pres_16_table)
