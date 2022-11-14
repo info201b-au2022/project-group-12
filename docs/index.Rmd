@@ -7,6 +7,7 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+
 library("dplyr")
 library("knitr")
 ```
@@ -24,10 +25,15 @@ The state with the highest average median household income of voters in the 2018
 The average percentage of female voters in the 2018 election across the United States was `r summary_info$avg_female_pct`%.
 The state with the highest average percentage of voters that were aged 29 and under in the 2018 election was `r summary_info$max_young`.
 
+## Table  
+### An Overview of Demographics (2016 Presidential Election)  
+The table below shows aggregate information about the states and how their populations voted in the 2016 Presidential Election. All numerical value refer to percentages. For Columns 4-10, these refer to each demographic as a percentage of *total* population. 
+
 ```{r pres_16_table, echo=FALSE}
 source("../source/2018_analysis.R")
 kable(pres_16_table)
 ```
+##Observations
 
 
 ```{r echo=FALSE}
