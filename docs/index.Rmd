@@ -27,14 +27,22 @@ The state with the highest average percentage of voters that were aged 29 and un
 
 ## Table  
 ### An Overview of Demographics (2016 Presidential Election)  
-The table below shows aggregate information about the states and how their populations voted in the 2016 Presidential Election. All numerical value refer to percentages. For Columns 4-10, these refer to each demographic as a percentage of *total* population. 
+The table below shows aggregate information about the states and how their populations  
+voted in the 2016 Presidential Election. All numerical value refer to percentages.   
+For Columns 4-10, these refer to each demographic as a percentage of *total* population.  
+
+##Why This Is Relevant  
+We chose to include this table because it gives a brief glimpse into how different   
+demographics within a state can affect the candidate it votes for. For example,   
+states with high (over 60%) rural populations tended to vote overwhelmingly for   
+Trump; meanwhile, states with higher median household incomes chose Clinton. 
 
 ```{r pres_16_table, echo=FALSE}
 source("../source/2018_analysis.R")
 kable(pres_16_table)
 ```
-##Observations
 
+ 
 
 ```{r echo=FALSE}
 source("../source/p2_map.R")
