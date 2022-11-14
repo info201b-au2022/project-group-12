@@ -46,6 +46,7 @@ kable(pres_16_table)
 
 ```{r echo=FALSE}
 source("../source/p2_map.R")
+library("ggplot2")
 ```
 
 ## Map

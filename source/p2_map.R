@@ -1,8 +1,11 @@
-ballot_locations <- read.csv("/Users/sukhmandhillon/Library/CloudStorage/OneDrive-UW/Undergrad/2.Sophomore/Autumn 22/Info 201/Voting_Locations_and_Ballot_Boxes.R")
+
+install.packages("maps")
+ballot_locations <- read.csv("../data/Voting_Locations_and_Ballot_Boxes.csv")
 View(ballot_locations)
 
 library("tidyverse")
 library("ggplot2")
+library("maps")
 
 state <- map_data("state")
 washington <- subset(state, region == "washington")
