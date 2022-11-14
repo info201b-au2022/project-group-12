@@ -13,18 +13,18 @@ View(df_trumppercent)
 
 
 
-p<- ggplot(data = df_trumppercent) +
-  geom_point(
-    mapping = aes(
-    x = median_hh_inc,
-    y = trump_percent,
-    color = state
-    ) 
-     )
-p + labs(
-  title = "Correlation Between Median Household Income and Trump Votes", 
-  x = "Median Household Income", 
-  y = "Percentage of Votes for Trump in Each County")
+
+
+scatter1<- ggplot( data = df_trumppercent) +
+  geom_point ( 
+    mapping = aes( x= median_hh_inc, y = trump_percent, color = state
+                   )) + labs(
+                     title = "Correlation Between Median Household Income and Trump Votes", 
+                     x = "Median Household Income", 
+                     y = "Percentage of Votes for Trump in Each County" 
+                   )
+
+
 
 
 #Descriptive paragraph

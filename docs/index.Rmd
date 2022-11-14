@@ -92,3 +92,29 @@ is that there's almost one voting center in each county. However, some counties 
 larger than others which means that if someone in a larger county is interested in
 voting in person, they have to go a further distance than a smaller county. This can
 also limit voting rates in these populations.
+
+##Scatterplot
+
+
+``` {r echo=FALSE}
+source("../source/trump_percent_scatterplot.R)
+```
+
+```{r echo=FALSE}
+scatter1
+```
+
+##Purpose
+
+We included this chart because as per our research question, we want to analyze
+how household income correlates with the type of candidate they vote for. We 
+want to observe if there are, or aren't, any trends along all the counties in 
+America, which is what made this dataset perfect as it has the statistics and data
+of each county and state, and the number of votes in each county for each candidate. 
+This information can not only help with predicting voting trends, but understanding 
+the finanical setting of individuals and how it infleunces their voting decisions.
+
+
+##Observations
+This graph revealed a trend between house hold income and the percentage of people
+that would vote for Trump in the Presidential Election. In almost all counties in America.The largest cluster of votes for Trump were individuals with a median household income of between 40,000 - 50,000 dollars a year. This reveals that people in lower social economic statuses tended to vote for Trump. 
