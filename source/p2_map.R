@@ -23,7 +23,7 @@ overall_map <- ggplot(washington) +
   )+
   scale_color_manual(values=c('Light Blue','Red'))+
   labs(title = "Voting Locations and Type") +
-  coord_map() # use a map-based coordinate system
+  coord_map()
 overall_map
 
 complete_map <- overall_map +
