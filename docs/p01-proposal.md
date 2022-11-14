@@ -16,7 +16,7 @@ INFO-201: Technical Foundations of Informatics - The Information School - Univer
 Autumn 2022
 
 # Abstract
-Our main question is “How do the race, economics, and social status of each household affect voting rates in the United States in 2020?” This question is important because it allows us to see how democracy and votes are affected by demographics and socioeconomic status. To address the question, we will research, collect, and analyze the data for elections from 2020, and make comparisons between the states for better understanding.  
+Our main question is “How do the race, economics, and social status of each household affect voting rates across the United States?” This question is important because it allows us to see how democracy and votes are affected by demographics and socioeconomic status. To address the question, we will research, collect, and analyze the data for elections from 2020, 2018, and 2016 and make comparisons between the states for better understanding.  
 
 # Keywords
 - Frequency of Voting
@@ -26,7 +26,7 @@ Our main question is “How do the race, economics, and social status of each ho
 - Income
 
 # Introduction
-In the United States, the voting results and how people are involved in the process of voting all differ based on race, Hispanic origin, sex, age, or socioeconomic status. Our project is to demonstrate and visualize what the differences in registration as well as voting are by looking at the data provided. Between these different variables, we will also be comparing how they differ between the states of the United States of America by looking at the results from the election in 2020. And we will mainly focus on household income, age, and educational attainment effects on voting rates between the states. Also, we will address the value of human well-being and the reality of the voting system in America to see what aspects of the current voting system need to be changed. This data science will allow us to teach about the socioeconomic status influencing voting behavior in the United States.
+In the United States, the voting results and how people are involved in the process of voting all differ based on race, Hispanic origin, sex, age, or socioeconomic status. Our project is to demonstrate and visualize what the differences in registration as well as voting are by looking at the data provided. Between these different variables, we will also be comparing how they differ between the states of the United States of America by looking at the results from the elections in 2020, 2018, and 2016. We will mainly focus on how household income, race, and sex affects voting rates between the states. Also, we will address the value of human well-being and the reality of the voting system in America to see what aspects of the current voting system need to be changed. This data science will allow us to teach about the socioeconomic status influencing voting behavior in the United States.
 
 # Problem Domain
 ## I. Topic & Sociotechnical Setting
@@ -48,21 +48,20 @@ A potential benefit of investigating democratic disparities would be the ability
 Bringing awareness to the issues faced by underrepresented communities would prevent further voter suppression and underrepresentation of said communities in the legal system and the government.
 
 # Research Questions
-1. How do voting rates differ between each state?
-  * This question was motivated by the idea that each state has their own way of having elections done whether that is by going in person, having mail in voting, or both and it will be interesting to see if states with a certain way of voting have higher or lower voting rates.
-2. How does someone’s household income correlate with voting rates?
-  * This question is important because there should not be obstacles to prevent people from voting. If it is found that differences in income do affect whether one can vote, more needs to be done to get rid of those differences.
+1. How do voting rates between sexes differ between each state?
+  * This question was motivated by the idea that gender equality and equity have not yet been achieved in the United States. Because of this, we want to compare what voting rates are across states to see if certain states are making a better effort in reaching equality. This will also allow us to point out which states need to put more effort into making voting rates more equal across sexes.
+2. How does someone’s household income correlate with the type of candidate that is voted for?
+  * This question is important because it will be interesting to see if certain places with a specific household income tend to vote towards a candidate over another. Investigating this question can let us see which aspects of a candidate's campaign is most important for certain households.
 3. How does location affect the type of way someone votes or returns their ballot?
   * This question is important because voting needs to be practical so that nobody feels like they are being prevented from voting. Since everybody has unique lives, options are necessary so that everyone can turn in their ballot so it will be interesting to see if certain locations have less options than others.
 
 # The Dataset
-Our dataset is related to our problem domain because our dataset collected values about the total population in a group, the amount registered in that group, and the amount of people that actually registered in that group. The many groups in our dataset include age, sex, income, location, education, etc. This dataset will enable us to answer our research questions because we will be able to make a visualization that can show us relative trends between voting rates and each of the variables like income, age, and education levels.
+Our dataset is related to our problem domain because our dataset collected values about the total population in a group, the amount registered in that group, and the amount of people that actually registered in that group. The many groups in our dataset include age, sex, income, location, race, etc. This dataset will enable us to answer our research questions because we will be able to make a visualization that can show us relative trends between voting rates and each of the variables like income, age, and race.
 
 | Name of Data File                                                                             | Number of Observations (Rows) | Number of Variables (Columns) |
 |-----------------------------------------------------------------------------------------------|-------------------------------|-------------------------------|
 | Reported Voting and Registration, by Sex, Race and Hispanic Origin, for States: November 2020 | 572                           | 13                            |
 | U.S. General Elections 2018 - Analysis Dataset   | 3114                            | 39                            |
-| Survey_Data_from_5224_immigrant_and_refugee                                  | 5224                            | 29                             |
 | Voting Locations and Ballot Boxes                           | 538                           | 10                            |
 
 
@@ -70,8 +69,6 @@ Bureau, US Census. “Voting and Registration in the Election of November 2020.�
 
 GitHub,
 [U.S. General Elections 2018 - Analysis Dataset](https://raw.githubusercontent.com/MEDSL/2018-elections-unoffical/master/election-context-2018.csv)
-
-“Seattle Votes Survey Data from 5,224 Immigrant and Refugee Residents of Seattle/King County: City of Seattle Open Data Portal.” Seattle, [Survey_Data_from_5224_immigrant_and_refugee](https://data.seattle.gov/Community/Seattle-Votes-Survey-Data-from-5-224-immigrant-and/y5cf-gy2p/data)
 
 Washington Geospatial Open Data Portal, [Voting Locations and Ballot Boxes](https://geo.wa.gov/datasets/75fd31e30c76468291b48470a20b4b49/explore?location=47.194487%2C-120.764138%2C7.64&showTable=true)
 
@@ -105,8 +102,6 @@ Johnson, T. R. (2020, January 16). *The new voter suppression.* Brennan Center f
 
 GitHub, https://raw.githubusercontent.com/MEDSL/2018-elections-unoffical/master/election-context-2018.csv.
 
-“Seattle Votes Survey Data from 5,224 Immigrant and Refugee Residents of Seattle/King County: City of Seattle Open Data Portal.” Seattle, https://data.seattle.gov/Community/Seattle-Votes-Survey-Data-from-5-224-immigrant-and/y5cf-gy2p/data.
- 
 Washington Geospatial Open Data Portal, https://geo.wa.gov/datasets/75fd31e30c76468291b48470a20b4b49/explore?location=47.194487%2C-120.764138%2C7.64&amp;showTable=true.
 
 # Appendix A: Questions
