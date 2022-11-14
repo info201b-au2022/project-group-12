@@ -53,7 +53,16 @@ plot(pressure)
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
+```{r echo=FALSE}
+source("../source/summary_info.R")
+```
 
+## Dynamic Paragraph
+The average percentage of white voters in the 2018 election across the United States was `r summary_info$avg_white_pct`%.
+The average percentage of nonwhite voters in the 2018 election across the United States was `r summary_info$avg_nonwhite_pct`%.
+The state with the highest average median household income of voters in the 2018 election was `r summary_info$max_hh_inc`.
+The average percentage of female voters in the 2018 election across the United States was `r summary_info$avg_female_pct`%.
+The state with the highest average percentage of voters that were aged 29 and under in the 2018 election was `r summary_info$max_young`.
 
 
 ```{r echo=FALSE}
