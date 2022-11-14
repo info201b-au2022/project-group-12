@@ -1,5 +1,5 @@
 elections_2018_data <- read.csv("https://raw.githubusercontent.com/MEDSL/2018-elections-unoffical/master/election-context-2018.csv")
-View(elections_2018_data)
+# View(elections_2018_data)
 
 library("tidyverse")
 
@@ -29,5 +29,6 @@ summary_info$max_young <- elections_2018_data %>%
   filter(avg_young_pct == max(avg_young_pct)) %>%
   pull(state)
 
-View(summary_info)
+
+print(summary_info)
 
