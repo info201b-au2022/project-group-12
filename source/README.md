@@ -7,12 +7,6 @@ these sub-directories (TODO: Update/Delete)
 |---------------| -----------------|
 |[Map](./p2_map.R) | This file contains the code to create a map from the Voting Locations and Ballot Boxes dataset. 
 |[Summary_Info](./summary_info.R) | This file contains the code to 5 different values from the 2018 election dataset that will be included in the dynamic paragraph.
+|[2018 Table](./2018_analysis.R) | This file contains the code to a summarized table from the 2018 election dataset.
+|[Bar Chart](./Nov2020_Bar.R) | This file contains the code to create a map from the 2020 election census dataset.
 
-
-# DEVELOPER NOTE 1: About ... 
-* All source code for your projects should go in the `/source` directory
-* To organize your code, you might decide to create sub-directories
-* If you use sub-directories, plese briefly describe them in the table above
-* Please remember your audience (prospective employers, open source colleagues, TAs, Instructors). Therefore, 
-aim for clarity and conciseness.
-* When done, be sure to delete this NOTE sections (which are intended for you, of course, not your audience!)
