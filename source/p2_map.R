@@ -1,11 +1,8 @@
-
-install.packages("maps")
-ballot_locations <- read.csv("../data/Voting_Locations_and_Ballot_Boxes.csv")
+ballot_locations <- read.csv("/Users/sukhmandhillon/Documents/Documents_Sukhman Dhillon/info201/project-group-12/data/Voting_Locations_and_Ballot_Boxes.csv")
 View(ballot_locations)
 
 library("tidyverse")
 library("ggplot2")
-library("maps")
 
 state <- map_data("state")
 washington <- subset(state, region == "washington")
@@ -21,20 +18,14 @@ overall_map <- ggplot(washington) +
   geom_polygon(mapping = aes(x = long, y = lat, group = group)) + 
   geom_point(
     data = filtered_counties, 
-    mapping = aes(x = long, y = lat, color = type),
-    pch = 10
+    mapping = aes(x = long, y = lat, color = type)
   )+
-  scale_color_manual(values=c('Light Blue','Red'))+
-  labs(title = "Voting Locations and Type") +
-  coord_map()
+  labs(title = "Voting Locations and Type", x = "Longitude", y = "Latitude")
 overall_map
 
 complete_map <- overall_map +
   geom_polygon(data = washington_county, mapping = aes(x = long, y = lat, group=group), fill = NA, color = "white") +
   geom_polygon(fill = NA, mapping = aes(x = long, y = lat))
-complete_map
-
-complete_map <- complete_map + labs(x = "Longitude", y = "Latitude")
 complete_map
 
 # We included this chart because we noticed that in the dataset, the type of ballot

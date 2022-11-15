@@ -1,5 +1,5 @@
 ---
-title: "Voting Frequencies and Democratic Equity"
+title: "Voting Frequencies and Democratic Equity: Exploratory Data Analysis "
 author: "Elizabeth Deng, Judy Lee, Naiyyra Abdel Aziz, Sukhman Dhillon"
 date: "11/14/2022"
 output: html_document
@@ -7,12 +7,11 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
-
+options(repos = list(CRAN="http://cran.rstudio.com/"))
 library("dplyr")
 library("knitr")
+library("ggplot2")
 ```
-
-# Voting Frequencies & Democratic Equity: Exploratory Data Analysis  
 
 ```{r echo=FALSE}
 source("../source/summary_info.R")
@@ -46,7 +45,6 @@ kable(pres_16_table)
 
 ```{r echo=FALSE}
 source("../source/p2_map.R")
-library("ggplot2")
 ```
 
 ## Map
@@ -74,10 +72,8 @@ voting in person, they have to go a further distance than a smaller county. This
 also limit voting rates in these populations.
 
 ## Scatterplot
-
-
 ``` {r echo=FALSE}
-source("../source/trump_percent_scatterplot.R)
+source("../source/trump_percent_scatterplot.R")
 ```
 
 ```{r echo=FALSE}
@@ -99,13 +95,10 @@ the finanical setting of individuals and how it infleunces their voting decision
 This graph revealed a trend between house hold income and the percentage of people
 that would vote for Trump in the Presidential Election. In almost all counties in America.The largest cluster of votes for Trump were individuals with a median household income of between 40,000 - 50,000 dollars a year. This reveals that people in lower social economic statuses tended to vote for Trump. 
 
-
 ## Bar chart
 
 ```{r echo=FALSE}
 source("../source/Nov2020_Bar.R")
-library("ggplot2")
-library("scales")
 ```
 
 ```{r echo=FALSE}
