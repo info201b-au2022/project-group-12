@@ -3,7 +3,7 @@ library(ggplot2)
 library(tidyr)
 
 ## Data set
-Nov2020_states_data <- read.csv("/Users/seyeonlee/Documents/Info201/Table4b.csv")
+Nov2020_states_data <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-group-12/main/data/Reported_Voting_and_Registration_by_Sex_Race_and_Hispanic_Origin_for_States_November_2020.csv")
 data.frame(Nov2020_states_data)
 
 ## Organize the data
