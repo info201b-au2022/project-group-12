@@ -33,6 +33,7 @@ Nov2020_states_data <- Nov2020_states_data[!apply(Nov2020_states_data == "", 1, 
 Nov2020_states_data[Nov2020_states_data == ""] <- NA
 
 library(tidyverse)
+
 Nov2020_states_data <- Nov2020_states_data %>% 
   fill(State, .direction = "down")
 
@@ -54,6 +55,8 @@ data.frame(Male_vs_Female)
 Male_vs_Female$Percent_voted..Total. <- as.numeric(Male_vs_Female$Percent_voted..Total.)
 class(Male_vs_Female$Percent_voted..Total.)
 
+library(scales)
+
 MF_bar <- ggplot(Male_vs_Female, 
                  aes(x = State, y = Percent_voted..Total./100, 
                      fill = State)) +
@@ -71,4 +74,3 @@ MF_bar <- ggplot(Male_vs_Female,
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 MF_bar
-
