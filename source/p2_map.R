@@ -20,7 +20,8 @@ overall_map <- ggplot(washington) +
     data = filtered_counties, 
     mapping = aes(x = long, y = lat, color = type)
   )+
-  labs(title = "Voting Locations and Type", x = "Longitude", y = "Latitude")
+  labs(title = "Voting Locations and Type", x = "Longitude", y = "Latitude") +
+  coord_map()
 overall_map
 
 complete_map <- overall_map +
