@@ -55,7 +55,6 @@ data.frame(Male_vs_Female)
 Male_vs_Female$Percent_voted..Total. <- as.numeric(Male_vs_Female$Percent_voted..Total.)
 class(Male_vs_Female$Percent_voted..Total.)
 
-install.packages(scales)
 library(scales)
 
 MF_bar <- ggplot(Male_vs_Female, 
