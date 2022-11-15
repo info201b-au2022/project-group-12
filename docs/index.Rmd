@@ -12,7 +12,7 @@ library("dplyr")
 library("knitr")
 ```
 
-#Voting Frequencies & Democratic Equity: Exploratory Data Analysis  
+# Voting Frequencies & Democratic Equity: Exploratory Data Analysis  
 
 ```{r echo=FALSE}
 source("../source/summary_info.R")
@@ -31,7 +31,7 @@ The table below shows aggregate information about the states and how their popul
 voted in the 2016 Presidential Election. All numerical value refer to percentages.   
 For Columns 4-10, these refer to each demographic as a percentage of *total* population.  
 
-##Why This Is Relevant  
+## Why This Is Relevant  
 We chose to include this table because it gives a brief glimpse into how different   
 demographics within a state can affect the candidate it votes for. For example,   
 states with high (over 60%) rural populations tended to vote overwhelmingly for   
@@ -73,7 +73,7 @@ larger than others which means that if someone in a larger county is interested 
 voting in person, they have to go a further distance than a smaller county. This can
 also limit voting rates in these populations.
 
-##Scatterplot
+## Scatterplot
 
 
 ``` {r echo=FALSE}
@@ -84,7 +84,7 @@ source("../source/trump_percent_scatterplot.R)
 scatter1
 ```
 
-##Purpose
+## Purpose
 
 We included this chart because as per our research question, we want to analyze
 how household income correlates with the type of candidate they vote for. We 
@@ -95,6 +95,28 @@ This information can not only help with predicting voting trends, but understand
 the finanical setting of individuals and how it infleunces their voting decisions.
 
 
-##Observations
+## Observations
 This graph revealed a trend between house hold income and the percentage of people
 that would vote for Trump in the Presidential Election. In almost all counties in America.The largest cluster of votes for Trump were individuals with a median household income of between 40,000 - 50,000 dollars a year. This reveals that people in lower social economic statuses tended to vote for Trump. 
+
+
+## Bar chart
+
+```{r echo=FALSE}
+source("../source/Nov2020_Bar.R")
+library("ggplot2")
+library("scales")
+```
+
+```{r echo=FALSE}
+MF_bar
+```
+
+## Purpose
+
+The purpose of this chart is to compare the percentage of votes between gender in the United States in November 2020. The distribution of this data set is into many different categories, such as gender, race, Hispanic origin, total percentage of registration, total percentage of votes, and more. For that reason, we thought it would be interesting to make a distribution in a bar chart that shows the comparison of votes in gender by the state in the United States. 
+
+
+## Observations
+
+Through this chart, we can determine the gender participation in voting by states in the United States. For example, we can notice that the District of Columbia had the highest voting participation, and the females voted more, with 79.5 percent, while 75.5 percent of males voted. Also, we can observe that Arkansas had the lowest participation, and the females voted more, with 54.1 percent and 54.1 percent of males voting. Overall, females have participated more than males in voting. 
