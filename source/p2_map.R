@@ -1,4 +1,4 @@
-ballot_locations <- read.csv("/Users/sukhmandhillon/Documents/Documents_Sukhman Dhillon/info201/project-group-12/data/Voting_Locations_and_Ballot_Boxes.csv")
+ballot_locations <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-group-12/main/data/Voting_Locations_and_Ballot_Boxes.csv")
 View(ballot_locations)
 
 library("tidyverse")
