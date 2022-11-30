@@ -30,5 +30,5 @@ summary_info$max_young <- elections_2018_data %>%
   pull(state)
 
 
-View(summary_info)
+# View(summary_info)
 

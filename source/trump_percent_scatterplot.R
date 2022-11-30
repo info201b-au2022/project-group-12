@@ -1,7 +1,7 @@
 library(tidyverse)
 library(ggplot2)
 dataframe <- read.csv("https://raw.githubusercontent.com/MEDSL/2018-elections-unoffical/master/election-context-2018.csv")
-View(dataframe)
+# View(dataframe)
 
 
 
@@ -9,7 +9,7 @@ df_trumppercent<- mutate(
   dataframe,
   trump_percent = (trump16 / (trump16 + clinton16 + otherpres16)) *100 
 )
-View(df_trumppercent)
+# View(df_trumppercent)
 
 
 

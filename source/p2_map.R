@@ -1,5 +1,5 @@
 ballot_locations <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-group-12/main/data/Voting_Locations_and_Ballot_Boxes.csv")
-View(ballot_locations)
+# View(ballot_locations)
 
 library("tidyverse")
 library("ggplot2")
@@ -12,7 +12,7 @@ washington_county <- subset(counties, region == "washington")
 filtered_counties <- data.frame(
   county = ballot_locations$County, type = ballot_locations$Type, lat = ballot_locations$Lat, long = ballot_locations$Long
 )
-View(filtered_counties)
+# View(filtered_counties)
 
 overall_map <- ggplot(washington) +
   geom_polygon(mapping = aes(x = long, y = lat, group = group)) + 
@@ -22,12 +22,12 @@ overall_map <- ggplot(washington) +
   )+
   labs(title = "Voting Locations and Type", x = "Longitude", y = "Latitude") +
   coord_map()
-overall_map
+# overall_map
 
 complete_map <- overall_map +
   geom_polygon(data = washington_county, mapping = aes(x = long, y = lat, group=group), fill = NA, color = "white") +
   geom_polygon(fill = NA, mapping = aes(x = long, y = lat))
-complete_map
+# complete_map
 
 # We included this chart because we noticed that in the dataset, the type of ballot
 # box was split into two categories: drop boxes and voting centers. Because of this,

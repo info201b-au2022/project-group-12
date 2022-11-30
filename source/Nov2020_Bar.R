@@ -73,4 +73,4 @@ MF_bar <- ggplot(Male_vs_Female,
   theme(plot.title = element_text(hjust = 0.3)) +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
-MF_bar
+# MF_bar

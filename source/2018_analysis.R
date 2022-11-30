@@ -5,7 +5,7 @@ library("knitr")
 
 data_orig <- read.csv('https://raw.githubusercontent.com/MEDSL/2018-elections-unoffical/master/election-context-2018.csv')
 
-View(data_orig)
+# View(data_orig)
 
 
 data <- select(data_orig, -c(10:21)) %>%
@@ -47,4 +47,4 @@ pres_16_table <- pres_16 %>%
     Rural = round(mean(Rural), 1)
   )
 
-View(pres_16_table)
+# View(pres_16_table)
