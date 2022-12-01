@@ -14,20 +14,58 @@ filtered_counties <- data.frame(
 )
 # View(filtered_counties)
 
+drop_only <- filtered_counties %>%
+  filter(type == "Drop Box")
+
+center_only <- filtered_counties %>%
+  filter(type == "Voting Center")
+
+overall_drop <- ggplot(washington) +
+  geom_polygon(mapping = aes(x = long, y = lat, group = group)) + 
+  geom_point(
+    data = drop_only, 
+    mapping = aes(x = long, y = lat, color = type),
+  )+
+  labs(title = "Voting Locations and Type", x = "Longitude", y = "Latitude", color = "Type") +
+  coord_map()
+
+complete_drop <- overall_drop +
+  geom_polygon(data = washington_county, mapping = aes(x = long, y = lat, group=group), fill = NA, color = "white") +
+  geom_polygon(fill = NA, mapping = aes(x = long, y = lat)) +
+  scale_color_manual(values = c("purple"))
+# complete_drop
+
+overall_center <- ggplot(washington) +
+  geom_polygon(mapping = aes(x = long, y = lat, group = group)) + 
+  geom_point(
+    data = center_only, 
+    mapping = aes(x = long, y = lat, color = type),
+  )+
+  labs(title = "Voting Locations and Type", x = "Longitude", y = "Latitude", color = "Type") +
+  coord_map()
+
+complete_center <- overall_center +
+  geom_polygon(data = washington_county, mapping = aes(x = long, y = lat, group=group), fill = NA, color = "white") +
+  geom_polygon(fill = NA, mapping = aes(x = long, y = lat)) +
+  scale_color_manual(values = c("yellow"))
+# complete_center
+  
 overall_map <- ggplot(washington) +
   geom_polygon(mapping = aes(x = long, y = lat, group = group)) + 
   geom_point(
     data = filtered_counties, 
-    mapping = aes(x = long, y = lat, color = type)
+    mapping = aes(x = long, y = lat, color = type),
   )+
-  labs(title = "Voting Locations and Type", x = "Longitude", y = "Latitude") +
+  labs(title = "Voting Locations and Type", x = "Longitude", y = "Latitude", color = "Type") +
   coord_map()
 # overall_map
 
 complete_map <- overall_map +
   geom_polygon(data = washington_county, mapping = aes(x = long, y = lat, group=group), fill = NA, color = "white") +
-  geom_polygon(fill = NA, mapping = aes(x = long, y = lat))
+  geom_polygon(fill = NA, mapping = aes(x = long, y = lat)) +
+  scale_color_manual(values = c("purple", "yellow"))
 # complete_map
+
 
 # We included this chart because we noticed that in the dataset, the type of ballot
 # box was split into two categories: drop boxes and voting centers. Because of this,

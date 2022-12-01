@@ -10,7 +10,17 @@
 library(shiny)
 
 server <- function(input, output) {
-    # TBD
+  output$the_map <- renderPlotly({
+    if (input$map_points == "Drop Box and Voting Center") {
+      complete_map
+    }
+    else if (input$map_points == "Drop Box") {
+      complete_drop
+    }
+    else if (input$map_points == "Voting Center") {
+      complete_center
+    }
+  })
 }
 
 
