@@ -16,7 +16,7 @@ INFO-201: Technical Foundations of Informatics - The Information School - Univer
 Autumn 2022
 
 # Abstract
-Our main question is “How do the race, economics, and social status of each household affect voting rates across the United States?” This question is important because it allows us to see how democracy and votes are affected by demographics and socioeconomic status. To address the question, we will research, collect, and analyze the data for elections from 2020, 2018, and 2016 and make comparisons between the states for better understanding.  
+Our main question is “How does the gender, economics, and social status of each household affect voting rates across the United States?” This question is important because it allows us to see how democracy and votes are affected by demographics and socioeconomic status. To address the question, we will research, collect, and analyze the data for elections from 2020, 2018, and 2016 and make comparisons between the states for better understanding.  
 
 # Keywords
 - Frequency of Voting
@@ -26,7 +26,7 @@ Our main question is “How do the race, economics, and social status of each ho
 - Income
 
 # Introduction
-In the United States, the voting results and how people are involved in the process of voting all differ based on race, Hispanic origin, sex, age, or socioeconomic status. Our project is to demonstrate and visualize what the differences in registration as well as voting are by looking at the data provided. Between these different variables, we will also be comparing how they differ between the states of the United States of America by looking at the results from the elections in 2020, 2018, and 2016. We will mainly focus on how household income, race, and sex affects voting rates between the states. Also, we will address the value of human well-being and the reality of the voting system in America to see what aspects of the current voting system need to be changed. This data science will allow us to teach about the socioeconomic status influencing voting behavior in the United States.
+In the United States, the voting results and how people are involved in the process of voting all differ based on race, Hispanic origin, sex, age, or socioeconomic status. Our project is to demonstrate and visualize what the differences in registration as well as voting are by looking at the data provided. Between these different variables, we will also be comparing how they differ between the states of the United States of America by looking at the results from the elections in 2020, 2018, and 2016. We will mainly focus on how household income, race, location, and sex affects voting rates between the states. Also, we will address the value of human well-being and the reality of the voting system in America to see what aspects of the current voting system need to be changed. This data science will allow us to teach about the socioeconomic status influencing voting behavior in the United States.
 
 # Problem Domain
 ## I. Topic & Sociotechnical Setting
@@ -65,14 +65,7 @@ Our dataset is related to our problem domain because our dataset collected value
 | Voting Locations and Ballot Boxes                           | 538                           | 10                            |
 
 
-Bureau, US Census. “Voting and Registration in the Election of November 2020.” Census.gov, 28 Oct. 2021, [Reported Voting and Registration, by Sex, Race and Hispanic Origin, for States: November 2020](https://www2.census.gov/programs-surveys/cps/tables/p20/585/table04b.xlsx)
-
-GitHub,
-[U.S. General Elections 2018 - Analysis Dataset](https://raw.githubusercontent.com/MEDSL/2018-elections-unoffical/master/election-context-2018.csv)
-
-Washington Geospatial Open Data Portal, [Voting Locations and Ballot Boxes](https://geo.wa.gov/datasets/75fd31e30c76468291b48470a20b4b49/explore?location=47.194487%2C-120.764138%2C7.64&showTable=true)
-
-
+### Dataset Information
 1. Who collected the data? When? For what purpose?
  * The United States Census Bureau collected the data. They did this after the 2020 federal election and continued to update it until October 28, 2021. They did this because their mission is to be the leading provider of data related to the United States people and economy.
 2. How was the data collection effort funded? Who is likely to benefit from the data or make money?
@@ -82,16 +75,24 @@ Washington Geospatial Open Data Portal, [Voting Locations and Ballot Boxes](http
 4. How did you obtain the data? Do you credit the source of the data?
  * We obtained this data by doing google searches about the 2020 elections with keywords like “census”, “demographics”, “population”, etc. which led us to this data. Yes, we credit the source of the data.
 
+### Citations
+Bureau, US Census. “Voting and Registration in the Election of November 2020.” Census.gov, 28 Oct. 2021, [Reported Voting and Registration, by Sex, Race and Hispanic Origin, for States: November 2020](https://www2.census.gov/programs-surveys/cps/tables/p20/585/table04b.xlsx)
 
-# Expected Implications
-- One possible implication for our research questions is that it may push people to rethink and reevaluate the voting system set in place in America. It will allow for us to see the reality of the voting system and see the adverse effects of common issues such as age, finances, and education. This will allow state officials and policymakers to revise their systems and have a better understanding of where most votes come from and how certain populations make up most of the numbers. This will create better systems to be put in place to create equality and fair voting.
-- However, another implication is that it's possible that politicians use the data we collect to their advantage by looking at the populations that have higher voting rates and only target those to their campaign. This can be a problem because this would further enhance the problem that is currently happening.
+GitHub,
+[U.S. General Elections 2018 - Analysis Dataset](https://raw.githubusercontent.com/MEDSL/2018-elections-unoffical/master/election-context-2018.csv)
 
-# Limitations
-A limitation that may need to be addressed is the possibility of residents simply not voting, for no reason other than negligence. We might address this limitation by examining the total number of registered voters, the total number of people who actually voted, and count the difference of that as people who didn't vote. Another limitation in this project could be differences in advertising about elections and election dates across the United States of America. It's possible that this could influence whether people vote or not and could vary greatly across the United States. That means that in some locations, voting rates could be inflated but since we aren't looking into this variable, we won't be sure how it gets affected. To address this, we will example the margin of errors in the data to give us a relative idea about what the differences are and if they are significant. Another limitation could be the data size which can lead to bias if it's quite low which means that we will only analyze our larger datasets.
+Washington Geospatial Open Data Portal, [Voting Locations and Ballot Boxes](https://geo.wa.gov/datasets/75fd31e30c76468291b48470a20b4b49/explore?location=47.194487%2C-120.764138%2C7.64&showTable=true)
+
+# Findings
+Information goes here.
+
+# Discussion
+Information goes here.
+
+# Conclusion
+Information goes here.
 
 # References
-
 Baker, M. (2022, February 2). *Rejected mail ballots are showing racial disparities.* The New York Times. Retrieved October 31, 2022, from https://www.nytimes.com/2022/02/02/us/mail-voting-black-latino.html
 
 Bureau, US Census. “Voting and Registration in the Election of November 2020.” *Census.gov,* 28 Oct. 2021, https://www.census.gov/data/tables/time-series/demo/voting-and-registration/p20-585.html.
