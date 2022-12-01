@@ -8,6 +8,79 @@
 #
 
 library(shiny)
+library("tidyverse")
+library("ggplot2")
+
+ballot_locations <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-group-12/main/data/Voting_Locations_and_Ballot_Boxes.csv")
+# View(ballot_locations)
+
+state <- map_data("state")
+washington <- subset(state, region == "washington")
+counties <- map_data("county")
+washington_county <- subset(counties, region == "washington")
+
+filtered_counties <- data.frame(
+  county = ballot_locations$County, type = ballot_locations$Type, lat = ballot_locations$Lat, long = ballot_locations$Long
+)
+# View(filtered_counties)
+
+drop_only <- filtered_counties %>%
+  filter(type == "Drop Box")
+
+center_only <- filtered_counties %>%
+  filter(type == "Voting Center")
+
+overall_drop <- ggplot(washington) +
+  geom_polygon(mapping = aes(x = long, y = lat, group = group)) + 
+  geom_point(
+    data = drop_only, 
+    mapping = aes(x = long, y = lat, color = type),
+  )+
+  labs(title = "Voting Locations and Type", x = "Longitude", y = "Latitude", color = "Type") +
+  coord_map()
+
+complete_drop <- overall_drop +
+  geom_polygon(data = washington_county, mapping = aes(x = long, y = lat, group=group), fill = NA, color = "white") +
+  geom_polygon(fill = NA, mapping = aes(x = long, y = lat)) +
+  scale_color_manual(values = c("purple"))
+# complete_drop
+
+overall_center <- ggplot(washington) +
+  geom_polygon(mapping = aes(x = long, y = lat, group = group)) + 
+  geom_point(
+    data = center_only, 
+    mapping = aes(x = long, y = lat, color = type),
+  )+
+  labs(title = "Voting Locations and Type", x = "Longitude", y = "Latitude", color = "Type") +
+  coord_map()
+
+complete_center <- overall_center +
+  geom_polygon(data = washington_county, mapping = aes(x = long, y = lat, group=group), fill = NA, color = "white") +
+  geom_polygon(fill = NA, mapping = aes(x = long, y = lat)) +
+  scale_color_manual(values = c("yellow"))
+# complete_center
+
+overall_map <- ggplot(washington) +
+  geom_polygon(mapping = aes(x = long, y = lat, group = group)) + 
+  geom_point(
+    data = filtered_counties, 
+    mapping = aes(x = long, y = lat, color = type),
+  )+
+  labs(title = "Voting Locations and Type", x = "Longitude", y = "Latitude", color = "Type") +
+  coord_map()
+# overall_map
+
+complete_map <- overall_map +
+  geom_polygon(data = washington_county, mapping = aes(x = long, y = lat, group=group), fill = NA, color = "white") +
+  geom_polygon(fill = NA, mapping = aes(x = long, y = lat)) +
+  scale_color_manual(values = c("purple", "yellow"))
+# complete_map
+
+
+
+
+
+
 
 server <- function(input, output) {
   output$the_map <- renderPlotly({
