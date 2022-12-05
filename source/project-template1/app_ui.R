@@ -17,22 +17,22 @@ source("tabs/tab_panel_summary.R")
 source("tabs/tab_panel_report.R")
 
 ui <- navbarPage(
-  title = "Project Example",
+  title = "Voting Frequencies and Democratic Equity",
   position = "fixed-top",
 
   # A simple header
-  header = list(
-    tags$style(type = "text/css", "body {padding-top: 70px;}"),
-    hr(),
-    HTML("... Project Header... "),
-    hr()
-  ),
+  # header = list(
+  #   tags$style(type = "text/css", "body {padding-top: 70px;}"),
+  #   hr(),
+  #   HTML("... Project Header... "),
+  #   hr()
+  # ),
 
   # A simple footer
   footer = list(
     tags$style(type = "text/css", "body {padding-top: 70px;}"),
     hr(),
-    HTML("... Project Footer ... "),
+    HTML("Voting Frequencies and Democratic Equity | Naiyyra Abdel Aziz, Elizabeth Deng, Sukhman Dhillon, Judy Lee"),
     hr()
   ),
 

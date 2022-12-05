@@ -5,6 +5,10 @@ library(shiny)
 tab_panel_chart1 <-tabPanel(
   "Chart 1",
   hr(),
+  fluidPage(
+    h3("Voting Locations and Type"),
+    hr(),
+  ),
   fluidRow(
     column(12,
            
