@@ -1,6 +1,7 @@
 library(dplyr)
 library(ggplot2)
 library(tidyr)
+library(scales)
 
 ## Data set
 Nov2020_states_data <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-group-12/main/data/Reported_Voting_and_Registration_by_Sex_Race_and_Hispanic_Origin_for_States_November_2020.csv")
@@ -176,7 +177,6 @@ both_graph <- ggplotly(both_chart)
 both_graph
 
 
-
 #male
 male <- data.frame(Male_df)
 # View(male) 
@@ -187,16 +187,18 @@ sorted_male_data <- function(states) {
     return(male_data)   
 }
 male_table <- sorted_male_data(c("WASHINGTON", "CALIFORNIA", "DISTRICT OF COLUMBIA", "ARKANSAS", "US", "NEW YORK"))
-View(male_table)
+# View(male_table)
 
 male_chart<- ggplot(data = male_table) +
-  geom_col(mapping = aes(x = State, y = Percent_voted..Total.),
+  geom_col(mapping = aes(x = State, y = Percent_voted..Total., fill = Male),
            position = "dodge") +
+  scale_fill_manual(values = c("Male" = "#00BFC4"))+
   labs(
     title = "Percentage of Male Voted", 
     x = "State", 
     y = "Percentage" 
-  ) + theme(axis.text.x = element_text(angle = 90, hjust = 1))
+  ) + theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  theme(legend.position = "none")
 male_chart
 male_graph <- ggplotly(male_chart)
 male_graph
@@ -216,13 +218,15 @@ female_table <- sorted_female_data(c("WASHINGTON", "CALIFORNIA", "DISTRICT OF CO
 # View(female_table)
 
 female_chart<- ggplot(data = female_table) +
-  geom_col(mapping = aes(x = State, y = Percent_voted..Total.,),
+  geom_col(mapping = aes(x = State, y = Percent_voted..Total., fill = Female),
            position = "dodge") +
+  scale_fill_manual(values = c("Female" = "#F8766D"))+
   labs(
     title = "Percentage of Female Voted", 
     x = "State", 
     y = "Percentage" 
-  ) + theme(axis.text.x = element_text(angle = 90, hjust = 1))
+  ) + theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  theme(legend.position = "none")
 female_chart
 female_graph <- ggplotly(female_chart)
 female_graph

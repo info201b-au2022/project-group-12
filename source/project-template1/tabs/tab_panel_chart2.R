@@ -6,7 +6,7 @@ tab_panel_chart2 <-tabPanel(
   "Chart 2",
   hr(),
   fluidPage(
-    h2("Percentage of Male voted vs Percentage of Female voted"),
+    h2("Percentage of Male Voted vs Percentage of Female Voted"),
     hr()
   ),
   fluidRow(

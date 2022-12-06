@@ -8,8 +8,11 @@
 #
 
 library(shiny)
-library("tidyverse")
-library("ggplot2")
+library(tidyverse)
+library(ggplot2)
+library(tidyr)
+library(scales)
+library(dplyr)
 
 
 #------------------- Introduction Page -----------------------------
@@ -85,8 +88,177 @@ complete_map <- overall_map +
 
 #------------------ Interactive Page 2: Bar chart -------------------
 
+## Data set
 Nov2020_states_data <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-group-12/main/data/Reported_Voting_and_Registration_by_Sex_Race_and_Hispanic_Origin_for_States_November_2020.csv")
+data.frame(Nov2020_states_data)
 
+## Organize the data
+Nov2020_states_data <- Nov2020_states_data %>%
+  rename("State" = "Table.with.row.headers.in.columns.A.and.B..and.column.headers.in.rows.5.through.6."
+         , "Sex_Race_and_Hispanic_Origin" = "X"
+         , "Total_population" = "X.1"
+         , "Total_citizen_population" = "X.2"
+         , "Total_registered" = "X.3"
+         , "Percent_registered..Total." = "X.4"
+         , "Margin_of_error_1" = "X.5"
+         , "Percent_registered..Citizen." = "X.6"
+         , "Margin_of_error_2" = "X.7"
+         , "Total_voted" = "X.8"
+         , "Percent_voted..Total." = "X.9"
+         , "Margin_of_error_3" = "X.10"
+         , "Percent_voted..Citizen." = "X.11"
+         , "Margin_of_error_4" = "X.12"
+  )
+Nov2020_states_data <- slice(Nov2020_states_data, -1, -2, -3, -4, -5)
+
+Nov2020_states_data <- Nov2020_states_data %>% 
+  select(-c(Margin_of_error_1, Margin_of_error_2, Margin_of_error_3, Margin_of_error_4))
+
+Nov2020_states_data <- Nov2020_states_data[!apply(Nov2020_states_data == "", 1, all),]
+
+Nov2020_states_data[Nov2020_states_data == ""] <- NA
+
+
+Nov2020_states_data <- Nov2020_states_data %>% 
+  fill(State, .direction = "down")
+
+## New data with the total percentage of voted in gender 
+gender_total_voted <- Nov2020_states_data %>% 
+  filter(grepl('Male|Female', Sex_Race_and_Hispanic_Origin))
+
+gender_total_voted <- gender_total_voted %>%
+  rename("Gender" = "Sex_Race_and_Hispanic_Origin")
+
+
+
+## Total percentage of Male voted v.s. Total percentage of Female voted
+Male_vs_Female <- gender_total_voted %>%
+  select(Gender, State, Percent_voted..Total.)
+
+
+
+
+
+
+Male_vs_Female$Percent_voted..Total. <- as.numeric(Male_vs_Female$Percent_voted..Total.)
+(class(Male_vs_Female$Percent_voted..Total.))
+
+
+## Male voted
+male_total_voted <- Nov2020_states_data %>%
+  filter(grepl('Male', Sex_Race_and_Hispanic_Origin))
+
+male_total_voted <- male_total_voted %>%
+  rename("Male" = "Sex_Race_and_Hispanic_Origin")
+
+Male_voted <- male_total_voted %>%
+  select(Male, State, Percent_voted..Total.)
+
+Male_df <- data.frame(Male_voted)
+Male_df
+
+Male_voted$Percent_voted..Total. <- as.numeric(Male_voted$Percent_voted..Total.)
+class(Male_voted$Percent_voted..Total.)
+
+
+
+## Female voted
+female_total_voted <- Nov2020_states_data %>%
+  filter(grepl('Female', Sex_Race_and_Hispanic_Origin))
+
+female_total_voted <- female_total_voted %>%
+  rename("Female" = "Sex_Race_and_Hispanic_Origin")
+
+Female_voted <- female_total_voted %>%
+  select(Female, State, Percent_voted..Total.)
+
+Female_df <- data.frame(Female_voted)
+Female_df
+
+Female_voted$Percent_voted..Total. <- as.numeric(Female_voted$Percent_voted..Total.)
+class(Female_voted$Percent_voted..Total.)
+
+
+
+
+#male and female graph
+both <- data.frame(Male_vs_Female)
+# View(both) 
+
+sorted_data <- function(states) {
+  states_data <- both %>% 
+    filter(State %in% states) %>%
+    return(states_data)   
+}
+both_table <- sorted_data(c("WASHINGTON", "CALIFORNIA", "DISTRICT OF COLUMBIA", "ARKANSAS", "US", "NEW YORK"))
+# View(both_table)
+
+both_chart<- ggplot(data = both_table) +
+  geom_col(mapping = aes(x = State, y = Percent_voted..Total., fill = Gender),
+           position = "dodge") +
+  labs(
+    title = "Percentage of Male Voted vs. Percentage of Female Voted", 
+    x = "State", 
+    y = "Percentage" 
+  ) + theme(axis.text.x = element_text(angle = 90, hjust = 1))
+both_chart
+both_graph <- ggplotly(both_chart)
+both_graph
+
+
+#male graph
+male <- data.frame(Male_df)
+# View(male) 
+
+sorted_male_data <- function(states) {
+  male_data <- male %>% 
+    filter(State %in% states) %>%
+    return(male_data)   
+}
+male_table <- sorted_male_data(c("WASHINGTON", "CALIFORNIA", "DISTRICT OF COLUMBIA", "ARKANSAS", "US", "NEW YORK"))
+# View(male_table)
+
+male_chart<- ggplot(data = male_table) +
+  geom_col(mapping = aes(x = State, y = Percent_voted..Total., fill = Male),
+           position = "dodge") +
+  scale_fill_manual(values = c("Male" = "#00BFC4"))+
+  labs(
+    title = "Percentage of Male Voted", 
+    x = "State", 
+    y = "Percentage" 
+  ) + theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  theme(legend.position = "none")
+male_chart
+male_graph <- ggplotly(male_chart)
+male_graph
+
+
+
+#female graph
+female <- data.frame(Female_df)
+# View(female) 
+
+sorted_female_data <- function(states) {
+  female_data <- female %>% 
+    filter(State %in% states) %>%
+    return(female_data)   
+}
+female_table <- sorted_female_data(c("WASHINGTON", "CALIFORNIA", "DISTRICT OF COLUMBIA", "ARKANSAS", "US", "NEW YORK"))
+# View(female_table)
+
+female_chart<- ggplot(data = female_table) +
+  geom_col(mapping = aes(x = State, y = Percent_voted..Total., fill = Female),
+           position = "dodge") +
+  scale_fill_manual(values = c("Female" = "#F8766D"))+
+  labs(
+    title = "Percentage of Female Voted", 
+    x = "State", 
+    y = "Percentage" 
+  ) + theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  theme(legend.position = "none")
+female_chart
+female_graph <- ggplotly(female_chart)
+female_graph
 
 #------------------- Server -----------------------------
 
@@ -111,13 +283,13 @@ server <- function(input, output) {
   
   output$bar_chart <- renderPlotly({
     if (input$Gender == "Male and Female") {
-      MF_bar
+      both_graph
     }
     else if (input$Gender == "Male") {
-      Male_bar
+      male_graph
     }
     else if (input$Gender == "Female") {
-      Female_bar
+      female_graph
     }
   })
   
