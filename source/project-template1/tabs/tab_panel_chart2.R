@@ -14,7 +14,9 @@ tab_panel_chart2 <-tabPanel(
            
            #Create a select box
            selectInput(
-             "Gender", "Choose a gender", Gender
+             inputID = "Gender", 
+             label = "Choose a gender", 
+             choices = c("Gender")
            )),
     hr(),
   ),
