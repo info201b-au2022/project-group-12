@@ -14,9 +14,9 @@ tab_panel_chart2 <-tabPanel(
            
            #Create a select box
            selectInput(
-             inputID = "Gender", 
+             "Gender", 
              label = "Choose a gender", 
-             choices = c("Gender")
+             choices = c("Male and Female", "Male", "Female")
            )),
     hr(),
   ),
@@ -36,4 +36,18 @@ tab_panel_chart2 <-tabPanel(
     with 79.5%, while 75.5% of males voted. Also, we can observe that Arkansas had the lowest participation, and the females voted more, 
     with 54.1% and 54.1% of males voting. Overall, females have participated more than males in voting. ")
   )
+)
+
+
+
+
+selectInput(
+  "mapvar",
+  label = "Variable to Map",
+  choices = list(
+    "Population" = "population",
+    "Electoral Votes" = "votes",
+    "Votes / Population" = "ratio"
+  )
+)
 )
