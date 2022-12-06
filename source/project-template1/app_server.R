@@ -83,6 +83,10 @@ complete_map <- overall_map +
   scale_color_manual(values = c("purple", "yellow"))
 # complete_map
 
+#------------------ Interactive Page 2: Bar chart -------------------
+
+Nov2020_states_data <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-group-12/main/data/Reported_Voting_and_Registration_by_Sex_Race_and_Hispanic_Origin_for_States_November_2020.csv")
+
 
 #------------------- Server -----------------------------
 
@@ -105,27 +109,18 @@ server <- function(input, output) {
     }
   })
   
-}
-
-
-#------------------ Interactive Page 2: Bar chart -------------------
-
-Nov2020_states_data <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-group-12/main/data/Reported_Voting_and_Registration_by_Sex_Race_and_Hispanic_Origin_for_States_November_2020.csv")
-
-#------------------- Server -----------------------------
-
-server <- function(input, output) {
-  
   output$bar_chart <- renderPlotly({
-  if (input$Gender == "Male and Female") {
-    MF_bar
-  }
-  else if (input$Gender == "Male") {
-    Male_bar
-  }
-  else if (input$Gender == "Female") {
-    Female_bar
-  }
-})
-
+    if (input$Gender == "Male and Female") {
+      MF_bar
+    }
+    else if (input$Gender == "Male") {
+      Male_bar
+    }
+    else if (input$Gender == "Female") {
+      Female_bar
+    }
+  })
+  
 }
+
+
