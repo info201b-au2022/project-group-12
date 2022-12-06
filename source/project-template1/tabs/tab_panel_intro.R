@@ -18,7 +18,10 @@ of language minorities, and many more. The goal of this data analysis is to take
 identify groups of people who may be underrepresented in our current democratic process, and ideate methods
 to generate a more equitable democracy." 
 
-
+p4 <- "The data that we use in this report come from a number of places. We refer to the U.S. Census,
+the MIT Election Lab, and the Washington Geospatial Open Data Portal. The datasets contain information about the 
+2018 and 2020 elections, as well as information about locations across WA state where voters can cast their ballots. 
+Within this report, we wrangle the data to visualize and report insights about who is voting, and who isn't."
 
 tab_panel_intro <- tabPanel(
     "Introduction",
