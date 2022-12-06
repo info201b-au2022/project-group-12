@@ -151,6 +151,7 @@ MF_bar <- ggplot(Male_vs_Female,
 # __________________________
 # New graph idea
 
+#male and female
 both <- data.frame(Male_vs_Female)
 # View(both) 
 
@@ -159,10 +160,10 @@ sorted_data <- function(states) {
     filter(State %in% states) %>%
     return(states_data)   
 }
-table <- sorted_data(c("WASHINGTON", "CALIFORNIA", "DISTRICT OF COLUMBIA", "ARKANSAS", "US", "NEW YORK"))
-# View(table)
+both_table <- sorted_data(c("WASHINGTON", "CALIFORNIA", "DISTRICT OF COLUMBIA", "ARKANSAS", "US", "NEW YORK"))
+# View(both_table)
 
-both_chart<- ggplot(data = table) +
+both_chart<- ggplot(data = both_table) +
   geom_col(mapping = aes(x = State, y = Percent_voted..Total., fill = Gender),
            position = "dodge") +
   labs(
@@ -171,7 +172,61 @@ both_chart<- ggplot(data = table) +
     y = "Percentage" 
   ) + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 both_chart
-done <- ggplotly(both_chart)
-done
+both_graph <- ggplotly(both_chart)
+both_graph
+
+
+
+#male
+male <- data.frame(Male_df)
+# View(male) 
+
+sorted_male_data <- function(states) {
+  male_data <- male %>% 
+    filter(State %in% states) %>%
+    return(male_data)   
+}
+male_table <- sorted_male_data(c("WASHINGTON", "CALIFORNIA", "DISTRICT OF COLUMBIA", "ARKANSAS", "US", "NEW YORK"))
+View(male_table)
+
+male_chart<- ggplot(data = male_table) +
+  geom_col(mapping = aes(x = State, y = Percent_voted..Total.),
+           position = "dodge") +
+  labs(
+    title = "Percentage of Male Voted", 
+    x = "State", 
+    y = "Percentage" 
+  ) + theme(axis.text.x = element_text(angle = 90, hjust = 1))
+male_chart
+male_graph <- ggplotly(male_chart)
+male_graph
+
+
+
+#female
+female <- data.frame(Female_df)
+# View(female) 
+
+sorted_female_data <- function(states) {
+  female_data <- female %>% 
+    filter(State %in% states) %>%
+    return(female_data)   
+}
+female_table <- sorted_female_data(c("WASHINGTON", "CALIFORNIA", "DISTRICT OF COLUMBIA", "ARKANSAS", "US", "NEW YORK"))
+# View(female_table)
+
+female_chart<- ggplot(data = female_table) +
+  geom_col(mapping = aes(x = State, y = Percent_voted..Total.,),
+           position = "dodge") +
+  labs(
+    title = "Percentage of Female Voted", 
+    x = "State", 
+    y = "Percentage" 
+  ) + theme(axis.text.x = element_text(angle = 90, hjust = 1))
+female_chart
+female_graph <- ggplotly(female_chart)
+female_graph
+
+
 
 
