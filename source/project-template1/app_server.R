@@ -108,3 +108,16 @@ server <- function(input, output) {
 }
 
 
+#------------------ Interactive Page 2: Bar chart -------------------
+
+source('./source/Nov2020_Bar.R')
+Nov2020_states_data <- read.csv('./data/Reported_Voting_and_Registration_by_Sex_Race_and_Hispanic_Origin_for_States_November_2020.csv', stringsAsFactors = FALSE)
+
+#------------------- Server -----------------------------
+
+server <- function(input, output) {
+  
+  output$bar_chart <- renderPlotly({
+    return(Nov2020_Bar(MF_bar, input$Gender))
+  })
+}
