@@ -33,7 +33,7 @@ tab_panel_chart2 <-tabPanel(
     h3("Observations"),
     p("Through this chart, we can determine the gender participation in voting by states in the United States. 
     For example, we can notice that the District of Columbia had the highest voting participation, and the females voted more, 
-    with 79.5%, while 75.5% of males voted. Also, we can observe that Arkansas had the lowest participation, and the females voted more, 
-    with 54.1% and 54.1% of males voting. Overall, females have participated more than males in voting. ")
+    with 79.5%, while 75.7% of males voted. Also, we can observe that Arkansas had the lowest participation, and the females voted more, 
+    with 54.1% and 49.6% of males voting. Overall, females have participated more than males in voting. ")
   )
 )
