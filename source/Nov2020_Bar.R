@@ -146,3 +146,32 @@ MF_bar <- ggplot(Male_vs_Female,
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 # MF_bar
+
+
+# __________________________
+# New graph idea
+
+both <- data.frame(Male_vs_Female)
+# View(both) 
+
+sorted_data <- function(states) {
+  states_data <- both %>% 
+    filter(State %in% states) %>%
+    return(states_data)   
+}
+table <- sorted_data(c("WASHINGTON", "CALIFORNIA", "DISTRICT OF COLUMBIA", "ARKANSAS", "US", "NEW YORK"))
+# View(table)
+
+both_chart<- ggplot(data = table) +
+  geom_col(mapping = aes(x = State, y = Percent_voted..Total., fill = Gender),
+           position = "dodge") +
+  labs(
+    title = "Percentage of Male Voted vs. Percentage of Female Voted", 
+    x = "State", 
+    y = "Percentage" 
+  ) + theme(axis.text.x = element_text(angle = 90, hjust = 1))
+both_chart
+done <- ggplotly(both_chart)
+done
+
+

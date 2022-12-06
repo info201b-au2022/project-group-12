@@ -6,7 +6,7 @@ tab_panel_chart1 <-tabPanel(
   "Chart 1",
   hr(),
   fluidPage(
-    h3("Voting Locations and Type"),
+    h2("Voting Locations and Type"),
     hr(),
   ),
   fluidRow(
