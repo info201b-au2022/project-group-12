@@ -37,17 +37,3 @@ tab_panel_chart2 <-tabPanel(
     with 54.1% and 54.1% of males voting. Overall, females have participated more than males in voting. ")
   )
 )
-
-
-
-
-selectInput(
-  "mapvar",
-  label = "Variable to Map",
-  choices = list(
-    "Population" = "population",
-    "Electoral Votes" = "votes",
-    "Votes / Population" = "ratio"
-  )
-)
-)
