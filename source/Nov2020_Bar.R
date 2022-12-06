@@ -22,7 +22,7 @@ Nov2020_states_data <- Nov2020_states_data %>%
          , "Margin_of_error_3" = "X.10"
          , "Percent_voted..Citizen." = "X.11"
          , "Margin_of_error_4" = "X.12"
-       )
+  )
 Nov2020_states_data <- slice(Nov2020_states_data, -1, -2, -3, -4, -5)
 
 Nov2020_states_data <- Nov2020_states_data %>% 
@@ -55,7 +55,79 @@ data.frame(Male_vs_Female)
 Male_vs_Female$Percent_voted..Total. <- as.numeric(Male_vs_Female$Percent_voted..Total.)
 class(Male_vs_Female$Percent_voted..Total.)
 
+
+## Male voted
+male_total_voted <- Nov2020_states_data %>%
+  filter(grepl('Male', Sex_Race_and_Hispanic_Origin))
+
+male_total_voted <- male_total_voted %>%
+  rename("Male" = "Sex_Race_and_Hispanic_Origin")
+
+Male_voted <- male_total_voted %>%
+  select(Male, State, Percent_voted..Total.)
+
+data.frame(Male_voted)
+
+Male_voted$Percent_voted..Total. <- as.numeric(Male_voted$Percent_voted..Total.)
+class(Male_voted$Percent_voted..Total.)
+
+
+
+## Female voted
+female_total_voted <- Nov2020_states_data %>%
+  filter(grepl('Female', Sex_Race_and_Hispanic_Origin))
+
+female_total_voted <- female_total_voted %>%
+  rename("Female" = "Sex_Race_and_Hispanic_Origin")
+
+Female_voted <- female_total_voted %>%
+  select(Female, State, Percent_voted..Total.)
+
+data.frame(Female_voted)
+
+Female_voted$Percent_voted..Total. <- as.numeric(Female_voted$Percent_voted..Total.)
+class(Female_voted$Percent_voted..Total.)
+
+
+
+## Bar Chart
 library(scales)
+
+Male_bar <- ggplot(Male_voted, 
+                   aes(x = State, y = Percent_voted..Total./100, 
+                       fill = State)) +
+  geom_col(mapping = aes(x = State, y = Percent_voted..Total./100, fill = State), position = "dodge") +
+  facet_grid(Male ~ .) +
+  geom_text(aes(label = Percent_voted..Total.), vjust = -0.5, colour = "black", size = 2.2) +
+  geom_bar(position = "dodge", stat = "identity") +
+  xlab("State") + 
+  ylab("Percentage") +
+  scale_y_continuous(labels = percent, breaks = seq(0.45, 0.80, by=0.05), 
+                     oob = rescale_none, limits = c(0.45, 0.80)) +
+  labs(title = "Percentage of Male voted vs Percentage of Female voted") +
+  coord_fixed(ratio = 50) +
+  theme(plot.title = element_text(hjust = 0.3)) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+# Male_bar
+
+Female_bar <- ggplot(Female_voted, 
+                     aes(x = State, y = Percent_voted..Total./100, 
+                         fill = State)) +
+  geom_col(mapping = aes(x = State, y = Percent_voted..Total./100, fill = State), position = "dodge") +
+  facet_grid(Female ~ .) +
+  geom_text(aes(label = Percent_voted..Total.), vjust = -0.5, colour = "black", size = 2.2) +
+  geom_bar(position = "dodge", stat = "identity") +
+  xlab("State") + 
+  ylab("Percentage") +
+  scale_y_continuous(labels = percent, breaks = seq(0.45, 0.80, by=0.05), 
+                     oob = rescale_none, limits = c(0.45, 0.80)) +
+  labs(title = "Percentage of Male voted vs Percentage of Female voted") +
+  coord_fixed(ratio = 50) +
+  theme(plot.title = element_text(hjust = 0.3)) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+# Female_bar
 
 MF_bar <- ggplot(Male_vs_Female, 
                  aes(x = State, y = Percent_voted..Total./100, 
@@ -64,7 +136,7 @@ MF_bar <- ggplot(Male_vs_Female,
   facet_grid(Gender ~ .) +
   geom_text(aes(label = Percent_voted..Total.), vjust = -0.5, colour = "black", size = 2.2) +
   geom_bar(position = "dodge", stat = "identity") +
-  xlab("Gender") + 
+  xlab("State") + 
   ylab("Percentage") +
   scale_y_continuous(labels = percent, breaks = seq(0.45, 0.80, by=0.05), 
                      oob = rescale_none, limits = c(0.45, 0.80)) +
