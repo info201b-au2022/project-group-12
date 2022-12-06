@@ -46,7 +46,7 @@ overall_drop <- ggplot(washington) +
     data = drop_only, 
     mapping = aes(x = long, y = lat, color = type),
   )+
-  labs(title = "Voting Locations and Type", x = "Longitude", y = "Latitude", color = "Type") +
+  labs(title = "Voting Locations and Type", x = "", y = "", color = "Type") +
   coord_map()
 
 complete_drop <- overall_drop +
@@ -61,7 +61,7 @@ overall_center <- ggplot(washington) +
     data = center_only, 
     mapping = aes(x = long, y = lat, color = type),
   )+
-  labs(title = "Voting Locations and Type", x = "Longitude", y = "Latitude", color = "Type") +
+  labs(title = "Voting Locations and Type", x = "", y = "", color = "Type") +
   coord_map()
 
 complete_center <- overall_center +
@@ -76,7 +76,7 @@ overall_map <- ggplot(washington) +
     data = filtered_counties, 
     mapping = aes(x = long, y = lat, color = type),
   )+
-  labs(title = "Voting Locations and Type", x = "Longitude", y = "Latitude", color = "Type") +
+  labs(title = "Voting Locations and Type", x = "", y = "", color = "Type") +
   coord_map()
 # overall_map
 
