@@ -273,7 +273,7 @@ df_trumppercent<- mutate(
   dataframe,
   trump_percent = (trump16 / (trump16 + clinton16 + otherpres16)) *100 
 )
-# View(df_trumppercent)
+ View(df_trumppercent)
 
 
 
@@ -287,6 +287,8 @@ scatter1<- ggplot(data = df_trumppercent) +
       color = "State"
     )
 
+# df2<- df_trumppercent %>%
+#   filter(state == input$state_chosen)
 
 #------------------- Server -----------------------------
 
@@ -321,8 +323,15 @@ server <- function(input, output) {
     }
   })
   
-  output$scatter<- renderPlotly({
-    scatter1
+  output$scatter<- renderPlot({
+    ggplot(df_trumppercent,
+           aes( x= median_hh_inc, y = trump_percent, color = state
+           )) + labs(
+             title = "Median Household Income and Trump Votes", 
+             x = "Median Household Income", 
+             y = "Percentage of Votes for Trump in Each County",
+             color = "State"
+           )
   })
   
 }

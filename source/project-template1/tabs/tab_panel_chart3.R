@@ -13,8 +13,8 @@ tab_panel_chart3 <-tabPanel(
     column(12,
            #Create a select box
            selectInput(
-             "State", 
-             label = "Choose a location", 
+             inputId = 'state_chosen', 
+             label = "Choose a State", 
              choices = list("USA", "Alabama", "Arizona", "Arkanasas", "California", "Colorado", "Connecticut", "Delaware", 
                          "District of Columbia", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa",
                          "Kansas","Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota",
@@ -22,7 +22,7 @@ tab_panel_chart3 <-tabPanel(
                          "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island",
                          "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia",
                          "Wisconsin", "Wyoming"),
-             selected = "USA"
+             selected = TRUE
                          
            )),
     
