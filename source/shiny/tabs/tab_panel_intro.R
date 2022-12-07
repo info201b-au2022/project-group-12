@@ -24,11 +24,12 @@ the MIT Election Lab, and the Washington Geospatial Open Data Portal. The datase
 Within this report, we wrangle the data to visualize and report insights about who is voting, and who isn't."
 
 tab_panel_intro <- tabPanel(
-    "Introduction",
-    h1("Project Introduction"),
-    p(p1),
-    p(p2),
-    imageOutput("img1"),
-    p(p3),
-    p(p4)
+  "Introduction",
+  h1("Project Introduction"),
+  hr(),
+  p(p1),
+  p(p2),
+  p(p3),
+  p(p4),
+  imageOutput("img1")
 )
