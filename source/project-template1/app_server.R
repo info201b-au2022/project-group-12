@@ -283,7 +283,8 @@ scatter1<- ggplot(data = df_trumppercent) +
     )) + labs(
       title = "Median Household Income and Trump Votes", 
       x = "Median Household Income", 
-      y = "Percentage of Votes for Trump in Each County" 
+      y = "Percentage of Votes for Trump in Each County",
+      color = "State"
     )
 
 
