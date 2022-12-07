@@ -293,6 +293,38 @@ server <- function(input, output) {
     }
   })
   
+  output$scatter<- renderPlotly({
+    
+  })
+  
 }
 
+
+
+#--------------------Interactive Page 3 Scatterplot ------------------
+library(tidyverse)
+library(ggplot2)
+dataframe <- read.csv("https://raw.githubusercontent.com/MEDSL/2018-elections-unoffical/master/election-context-2018.csv")
+# View(dataframe)
+
+
+
+df_trumppercent<- mutate(
+  dataframe,
+  trump_percent = (trump16 / (trump16 + clinton16 + otherpres16)) *100 
+)
+View(df_trumppercent)
+
+
+
+
+
+scatter1<- ggplot( data = df_trumppercent) +
+  geom_point ( 
+    mapping = aes( x= median_hh_inc, y = trump_percent, color = state
+    )) + labs(
+      title = "Correlation Between Median Household Income and Trump Votes", 
+      x = "Median Household Income", 
+      y = "Percentage of Votes for Trump in Each County" 
+    )
 
