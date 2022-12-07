@@ -29,5 +29,6 @@ tab_panel_intro <- tabPanel(
     p(p1),
     p(p2),
     imageOutput("img1"),
-    p(p3)
+    p(p3),
+    p(p4)
 )
