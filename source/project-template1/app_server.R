@@ -275,9 +275,84 @@ df_trumppercent<- mutate(
 )
 # View(df_trumppercent)
 
+ark <- df_trumppercent %>%
+  filter(state == "Arkansas")
 
+cali <- df_trumppercent %>%
+  filter(state == "California")
+
+vir <- df_trumppercent %>%
+  filter(state == "Virginia")
+
+ny <- df_trumppercent %>%
+  filter(state == "New York")
+
+wash <- df_trumppercent %>%
+  filter(state == "Washington")
+
+ken <- df_trumppercent %>%
+  filter(state == "Kentucky")
 
 scatter1<- ggplot(data = df_trumppercent) +
+  geom_point ( 
+    mapping = aes( x= median_hh_inc, y = trump_percent, color = state
+    )) + labs(
+      title = "Median Household Income and Trump Votes", 
+      x = "Median Household Income (in dollars)", 
+      y = "Percentage of Votes for Trump in Each County",
+      color = "State"
+    ) +
+  scale_x_continuous(labels = scales::comma)
+
+cali_graph <- ggplot(data = cali) +
+  geom_point ( 
+    mapping = aes( x= median_hh_inc, y = trump_percent, color = state
+    )) + labs(
+      title = "Median Household Income and Trump Votes", 
+      x = "Median Household Income (in dollars)", 
+      y = "Percentage of Votes for Trump in Each County",
+      color = "State"
+    ) +
+  scale_color_manual(values = c("orange")) +
+  scale_x_continuous(labels = scales::comma)
+
+vir_graph <- ggplot(data = vir) +
+  geom_point (
+    mapping = aes( x= median_hh_inc, y = trump_percent, color = state
+    )) + labs(
+      title = "Median Household Income and Trump Votes",
+      x = "Median Household Income (in dollars)",
+      y = "Percentage of Votes for Trump in Each County",
+      color = "State"
+    ) +
+  scale_color_manual(values = c("#FF61CC")) +
+  scale_x_continuous(labels = scales::comma)
+
+ny_graph <- ggplot(data = ny) +
+  geom_point ( 
+    mapping = aes( x= median_hh_inc, y = trump_percent, color = state
+    )) + labs(
+      title = "Median Household Income and Trump Votes", 
+      x = "Median Household Income (in dollars)", 
+      y = "Percentage of Votes for Trump in Each County",
+      color = "State"
+    ) +
+  scale_color_manual(values = c("#00A9FF")) +
+  scale_x_continuous(labels = scales::comma)
+
+wash_graph <- ggplot(data = wash) +
+  geom_point ( 
+    mapping = aes( x= median_hh_inc, y = trump_percent, color = state
+    )) + labs(
+      title = "Median Household Income and Trump Votes", 
+      x = "Median Household Income (in dollars)", 
+      y = "Percentage of Votes for Trump in Each County",
+      color = "State"
+    ) +
+  scale_color_manual(values = c("#F564E3")) +
+  scale_x_continuous(labels = scales::comma)
+
+ark_graph <- ggplot(data = ark) +
   geom_point ( 
     mapping = aes( x= median_hh_inc, y = trump_percent, color = state
     )) + labs(
@@ -285,8 +360,21 @@ scatter1<- ggplot(data = df_trumppercent) +
       x = "Median Household Income", 
       y = "Percentage of Votes for Trump in Each County",
       color = "State"
-    )
+    ) +
+  scale_color_manual(values = c("dark orange")) +
+  scale_x_continuous(labels = scales::comma)
 
+ken_graph <- ggplot(data = ken) +
+  geom_point ( 
+    mapping = aes( x= median_hh_inc, y = trump_percent, color = state
+    )) + labs(
+      title = "Median Household Income and Trump Votes", 
+      x = "Median Household Income", 
+      y = "Percentage of Votes for Trump in Each County",
+      color = "State"
+    ) +
+  scale_color_manual(values = c("#00BA38")) +
+  scale_x_continuous(labels = scales::comma)
 
 #------------------- Server -----------------------------
 
@@ -322,7 +410,27 @@ server <- function(input, output) {
   })
   
   output$scatter<- renderPlotly({
-    scatter1
+    if (input$State == "USA") {
+      scatter1
+    }
+    else if (input$State == "Washington") {
+      wash_graph
+    }
+    else if (input$State == "Arkansas") {
+      ark_graph
+    }
+    else if (input$State == "California") {
+      cali_graph
+    }
+    else if (input$State == "New York") {
+      ny_graph
+    }
+    else if (input$State == "Virginia") {
+      vir_graph
+    }
+    else if (input$State == "Kentucky") {
+      ken_graph
+    }
   })
   
 }
