@@ -10,4 +10,4 @@ these sub-directories:
 |[2018 Table](./2018_analysis.R) | This file contains the code to a summarized table from the 2018 election dataset.
 |[Bar Chart](./Nov2020_Bar.R) | This file contains the code to create a map from the 2020 election census dataset.
 |[Scatter Plot](./trump_percent_scatterplot.R) | This file contains the code to create a scatter plot from the 2018 dataset.
-|[Project Files](./project-template1) | This folder contains the code to create our interactive shiny report.
+|[Project Files](./shiny) | This folder contains the code to create our interactive shiny report.
