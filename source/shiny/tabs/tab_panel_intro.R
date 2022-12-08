@@ -23,6 +23,18 @@ the MIT Election Lab, and the Washington Geospatial Open Data Portal. The datase
 2018 and 2020 elections, as well as information about locations across WA state where voters can cast their ballots. 
 Within this report, we wrangle the data to visualize and report insights about who is voting, and who isn't."
 
+p5 <- "- How do voting rates between sexes differ between each state?"
+p6 <- "- How does someone’s household income correlate with the type of candidate that is voted for?"
+p7 <- "- How does location affect the type of way someone votes or returns their ballot?"
+p8 <- "In this report, we are going to try to answer these questions:"
+
+p9 <- "From this report, we learned that voting rates aren't too different between each state how 
+overall participation does vary from state to state. We also found that populations with lower household incomes
+tend to vote for candidates who have the economy as their main agenda, showing that financial
+security tends to be the most important issue over others for these populations. And finally,
+we learned that location can affect how someone returns their ballot or votes in person
+because the spread of voting centers and drop boxes are not consistent."
+
 tab_panel_intro <- tabPanel(
   "Introduction",
   h1("Project Introduction"),
@@ -30,6 +42,14 @@ tab_panel_intro <- tabPanel(
   p(p1),
   p(p2),
   p(p3),
+  h3("Questions"),
+  p(p8),
+  p(p5),
+  p(p6),
+  p(p7),
+  h3("Data"),
   p(p4),
+  h3("Key Findings"),
+  p(p9),
   imageOutput("img1")
 )
