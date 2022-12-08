@@ -28,7 +28,7 @@ p6 <- "- How does someone’s household income correlate with the type of candid
 p7 <- "- How does location affect the type of way someone votes or returns their ballot?"
 p8 <- "In this report, we are going to try to answer these questions:"
 
-p9 <- "From this report, we learned that voting rates aren't too different between each state how 
+p9 <- "From this report, we learned that voting rates aren't too different between each state and how 
 overall participation does vary from state to state. We also found that populations with lower household incomes
 tend to vote for candidates who have the economy as their main agenda, showing that financial
 security tends to be the most important issue over others for these populations. And finally,

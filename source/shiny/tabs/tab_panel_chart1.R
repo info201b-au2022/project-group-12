@@ -35,7 +35,7 @@ voting centers across Washington state were like to see if any obvious patterns 
 like whether location affects the type of ballot box is near someone."),
     h3("Observations"),
     p("After creating this map, something that can be seen quickly is the high number of
-data points near Seattle. Specifically, these data points are red which represent 
+data points near Seattle. Specifically, these data points are purple which represent 
 drop boxes. We can learn from this chart that more drop boxes are put in more densely
 populated areas. However, that means that areas with less people have less options
 for where they can return their ballots. This can make it harder for these populations
