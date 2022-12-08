@@ -431,7 +431,7 @@ pres_16 <- pres_16 %>%
 trump <- pres_16 %>% 
   filter(Trump >= 50) %>%
   summarize(
-    candidate = "Trump",
+    "Candidate" = "Trump",
     "White" = round(mean(White), 2),
     "Non-White" = round(mean(NonWhite), 2),
     "Foreign-Born" = round(mean(Foreign_Born), 2),
