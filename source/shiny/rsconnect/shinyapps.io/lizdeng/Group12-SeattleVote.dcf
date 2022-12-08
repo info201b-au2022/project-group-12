@@ -5,9 +5,9 @@ account: lizdeng
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 7844470
-bundleId: 6608633
+bundleId: 6608669
 url: https://lizdeng.shinyapps.io/Group12-SeattleVote/
-when: 1670472186.44214
-lastSyncTime: 1670472186.44214
+when: 1670472754.1167
+lastSyncTime: 1670472754.11671
 asMultiple: FALSE
 asStatic: FALSE

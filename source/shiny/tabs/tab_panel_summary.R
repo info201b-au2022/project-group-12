@@ -8,8 +8,8 @@ filler <- "this is filler text"
 p1 <- "We were able to select specific elements from the chosen datasets and wrangle the 
 data to gather information about who votes, and who they vote for. Some major findings are as follows. "
 
-p2 <- "The following table shows summary information about different demoraphic groups across all 
-50 states, and how they voted for Trump in the 2016 election. All values are in percentages except for income."
+p2 <- "The following table shows summary statistics for different demographics and how they voted in the 2016 presidential election. 
+All values are in percentages except Median Income."
 
 p3 <- "By mapping out the locations of voting centers and drop boxes, it became noticable that physical locations
 for voting become increasingly sparse the further you go from the urban areas of Washington state. This highlights the issue

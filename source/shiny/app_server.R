@@ -384,7 +384,7 @@ library("knitr")
 
 data_orig <- read.csv('https://raw.githubusercontent.com/MEDSL/2018-elections-unoffical/master/election-context-2018.csv')
 
-View(data_orig)
+
 
 
 data <- select(data_orig, -c(10:21)) %>%
@@ -412,7 +412,7 @@ pres_16 <- transmute(data, State = data$state,
                      Median_Income = data$median_hh_inc,
                      Rural = data$rural_pct) 
 
-summary_table <- pres_16 %>%
+pres_16 <- pres_16 %>%
   group_by(State) %>%
   summarize(
     Trump = round(mean(Trump), 1),
@@ -426,7 +426,35 @@ summary_table <- pres_16 %>%
     Rural = round(mean(Rural), 1)
   )
 
-View(summary_table)
+trump <- pres_16 %>% 
+  filter(Trump >= 50) %>%
+  summarize(
+    candidate = "Trump",
+    "White" = round(mean(White), 2),
+    "Non-White" = round(mean(NonWhite), 2),
+    "Foreign-Born" = round(mean(Foreign_Born), 2),
+    "Female" = round(mean(Female), 2),
+    "Young (Under 29)" = round(mean(Under_29), 2),
+    "Median Income" = round(mean(Median_Income), 0),
+    "Rural" = round(mean(Rural), 2)
+  )
+
+clinton <- pres_16 %>% 
+  filter(Clinton >= 50) %>%
+  summarize(
+    candidate = "Clinton",
+    "White" = round(mean(White), 2),
+    "Non-White" = round(mean(NonWhite), 2),
+    "Foreign-Born" = round(mean(Foreign_Born), 2),
+    "Female" = round(mean(Female), 2),
+    "Young (Under 29)" = round(mean(Under_29), 2),
+    "Median Income" = round(mean(Median_Income), 0),
+    "Rural" = round(mean(Rural), 2)
+  )
+
+
+summary_table <- rbind(trump, clinton)
+# View(summary_table)
 
 #------------------- Server -----------------------------
 

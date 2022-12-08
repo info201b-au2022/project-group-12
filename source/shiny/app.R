@@ -7,8 +7,10 @@
 #    http://shiny.rstudio.com/
 #
 # install.packages('rsconnect')
-library("rsconnect")
+library(rsconnect)
 library(shiny)
+
+
 source("app_ui.R")
 source("app_server.R")
 
