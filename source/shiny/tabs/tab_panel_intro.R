@@ -42,6 +42,7 @@ tab_panel_intro <- tabPanel(
   p(p1),
   p(p2),
   p(p3),
+  img("", src = "vote.png", height = "50%", width = "50%"),
   h3("Questions"),
   p(p8),
   p(p5),
@@ -50,6 +51,5 @@ tab_panel_intro <- tabPanel(
   h3("Data"),
   p(p4),
   h3("Key Findings"),
-  p(p9),
-  imageOutput("img1")
+  p(p9)
 )

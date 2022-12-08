@@ -384,7 +384,7 @@ library("knitr")
 
 data_orig <- read.csv('https://raw.githubusercontent.com/MEDSL/2018-elections-unoffical/master/election-context-2018.csv')
 
-View(data_orig)
+# View(data_orig)
 
 
 data <- select(data_orig, -c(10:21)) %>%
@@ -426,7 +426,7 @@ summary_table <- pres_16 %>%
     Rural = round(mean(Rural), 1)
   )
 
-View(summary_table)
+# View(summary_table)
 
 #------------------- Server -----------------------------
 
@@ -434,10 +434,6 @@ View(summary_table)
 server <- function(input, output) {
   
   output$summary <- renderTable(summary_table)
-  
-  output$img1 <- renderImage({
-    file <- normalizePath(file.path("./www/vote1.jpg"))
-    list(src = file)}, deleteFile = FALSE)
   
   output$the_map <- renderPlotly({
     if (input$map_points == "Drop Box and Voting Center") {
