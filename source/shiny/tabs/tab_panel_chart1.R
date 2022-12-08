@@ -14,7 +14,7 @@ tab_panel_chart1 <-tabPanel(
            
            # Copy the line below to make a set of radio buttons
            radioButtons(inputId = "map_points", label = h3("Plot:"),
-                        choices = list("Drop Box and Voting Center", "Drop Box", "Voting Center"),
+                        choices = list("Drop Box and Voting Center", "Drop Box Only", "Voting Center Only"),
                         selected = "Drop Box and Voting Center")),
     
     hr(),

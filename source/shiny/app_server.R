@@ -389,10 +389,10 @@ server <- function(input, output) {
     if (input$map_points == "Drop Box and Voting Center") {
       complete_map
     }
-    else if (input$map_points == "Drop Box") {
+    else if (input$map_points == "Drop Box Only") {
       complete_drop
     }
-    else if (input$map_points == "Voting Center") {
+    else if (input$map_points == "Voting Center Only") {
       complete_center
     }
   })
