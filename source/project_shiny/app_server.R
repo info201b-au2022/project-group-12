@@ -13,6 +13,8 @@ library(ggplot2)
 library(tidyr)
 library(scales)
 library(dplyr)
+library(maps)
+library(mapproj)
 
 
 #------------------- Introduction Page -----------------------------
@@ -386,7 +388,6 @@ data_orig <- read.csv('https://raw.githubusercontent.com/MEDSL/2018-elections-un
 
 
 
-
 data <- select(data_orig, -c(10:21)) %>%
   select(-c(27))
 
@@ -426,6 +427,7 @@ pres_16 <- pres_16 %>%
     Rural = round(mean(Rural), 1)
   )
 
+
 trump <- pres_16 %>% 
   filter(Trump >= 50) %>%
   summarize(
@@ -442,7 +444,7 @@ trump <- pres_16 %>%
 clinton <- pres_16 %>% 
   filter(Clinton >= 50) %>%
   summarize(
-    candidate = "Clinton",
+    "Candidate" = "Clinton",
     "White" = round(mean(White), 2),
     "Non-White" = round(mean(NonWhite), 2),
     "Foreign-Born" = round(mean(Foreign_Born), 2),
@@ -454,6 +456,7 @@ clinton <- pres_16 %>%
 
 
 summary_table <- rbind(trump, clinton)
+
 # View(summary_table)
 
 #------------------- Server -----------------------------
@@ -462,10 +465,6 @@ summary_table <- rbind(trump, clinton)
 server <- function(input, output) {
   
   output$summary <- renderTable(summary_table)
-  
-  output$img1 <- renderImage({
-    file <- normalizePath(file.path("./www/vote1.jpg"))
-    list(src = file)}, deleteFile = FALSE)
   
   output$the_map <- renderPlotly({
     if (input$map_points == "Drop Box and Voting Center") {
