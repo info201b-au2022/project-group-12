@@ -1,0 +1,11 @@
+name: project_shiny
+title: project_shiny
+username:
+account: sukhd12
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 7845094
+bundleId: 6609019
+url: https://sukhd12.shinyapps.io/project_shiny/
+when: 1670479919.52378
+lastSyncTime: 1670479919.5238

@@ -22,7 +22,7 @@ motivated a higher percentage of women to vote."
 
 p5 <- "In our last chart, we plotted the median household income of all counties with available data, in relation to what percentage of the county's
 voters voted for Trump in 2016. The scatterplot depicted an overwhelming trend: in counties with the highest percentage of votes for Trump, the median household
-income tended to cluster around $40k to $50k. For reference, the median household income across the nation as a whole was $59k in 2016, according to the U.S. Census.
+income tended to cluster around $40,000 to $50,000. For reference, the median household income across the nation as a whole was $59,000 in 2016, according to the U.S. Census.
 Further analysis can be done to determine what political issues motivated this economic range of Americans to cast their vote for Trump."
 
 tab_panel_summary <-tabPanel(
