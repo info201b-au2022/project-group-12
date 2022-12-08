@@ -13,6 +13,8 @@ library(ggplot2)
 library(tidyr)
 library(scales)
 library(dplyr)
+library(maps)
+library(mapproj)
 
 
 #------------------- Introduction Page -----------------------------
