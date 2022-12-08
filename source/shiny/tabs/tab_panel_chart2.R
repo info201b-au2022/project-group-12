@@ -29,11 +29,14 @@ tab_panel_chart2 <-tabPanel(
     p("The purpose of this chart is to compare the percentage of votes between gender in the United States in November 2020. 
       The distribution of this data set is into many different categories, such as gender, race, Hispanic origin, total percentage of registration, 
       total percentage of votes, and more. For that reason, we thought it would be interesting to make a distribution in a bar chart that shows 
-      the comparison of votes in gender by the state in the United States."),
+      the comparison of votes in gender by the state in the United States. Because showing all 50 states
+      would be overwhelming, we decided for our graph to focus on locations from different regions
+      of the United States to get a more clear visualization and see how they differ."),
     h3("Observations"),
     p("Through this chart, we can determine the gender participation in voting by states in the United States. 
     For example, we can notice that the District of Columbia had the highest voting participation, and the females voted more, 
     with 79.5%, while 75.7% of males voted. Also, we can observe that Arkansas had the lowest participation, and the females voted more, 
-    with 54.1% and 49.6% of males voting. Overall, females have participated more than males in voting. ")
+    with 54.1% and 49.6% of males voting. Overall, females have participated more than males in voting but the rates are quite similar. Further,
+      participation overall between states varies. ")
   )
 )

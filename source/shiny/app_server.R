@@ -198,7 +198,7 @@ both_chart<- ggplot(data = both_table) +
            position = "dodge") +
   labs(
     title = "Percentage of Male Voted vs. Percentage of Female Voted", 
-    x = "State", 
+    x = "Location", 
     y = "Percentage" 
   ) + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 both_chart
@@ -224,7 +224,7 @@ male_chart<- ggplot(data = male_table) +
   scale_fill_manual(values = c("Male" = "#00BFC4"))+
   labs(
     title = "Percentage of Male Voted", 
-    x = "State", 
+    x = "Location", 
     y = "Percentage" 
   ) + theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
   theme(legend.position = "none")
@@ -252,7 +252,7 @@ female_chart<- ggplot(data = female_table) +
   scale_fill_manual(values = c("Female" = "#F8766D"))+
   labs(
     title = "Percentage of Female Voted", 
-    x = "State", 
+    x = "Location", 
     y = "Percentage" 
   ) + theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
   theme(legend.position = "none")
